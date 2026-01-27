@@ -1,0 +1,15 @@
+{
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": false, // Important : ESLint gère la sauvegarde via codeActionsOnSave
+
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}

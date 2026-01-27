@@ -12,6 +12,11 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+    storageKey: 'app-color-mode'
+  },
 
   routeRules: {
     '/': { prerender: true }
@@ -23,7 +28,8 @@ export default defineNuxtConfig({
     config: {
       stylistic: {
         commaDangle: 'never',
-        braceStyle: '1tbs'
+        braceStyle: '1tbs',
+        quotes: 'double'
       }
     }
   }

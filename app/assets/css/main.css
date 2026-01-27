@@ -1,18 +1,37 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@theme static {
-  --font-sans: 'Public Sans', sans-serif;
-
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('/assets/fonts/MontserratAlternates-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@theme static {
+  --font-sans: "Montserrat Alternates", sans-serif;
+
+  --color-brand: #fef2f3;
+  --color-brand-50: #fef2f3;
+  --color-brand-100: #fee2e4;
+  --color-brand-200: #fecacd;
+  --color-brand-300: #fca5aa;
+  --color-brand-400: #f87179;
+  --color-brand-500: #ef444e;
+  --color-brand-600: #dc2631;
+  --color-brand-700: #b91c26;
+  --color-brand-800: #9f1c24;
+  --color-brand-900: #7f1d23;
+  --color-brand-950: #450a0e;
+
+  --color-charcoal-950: #0a0a0a;
+  --color-charcoal-900: #121212;
+}
+
+.dark {
+  --ui-bg: var(--color-charcoal-950);
+  --ui-bg-elevated: var(--color-charcoal-900);
+  --ui-border: rgba(157, 28, 40, 0.2);
+}
+
