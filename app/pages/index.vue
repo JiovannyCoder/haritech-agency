@@ -3,5 +3,6 @@
     <HomeHeroSection />
     <HomeAboutUsSection />
     <HomeServiceSection />
+    <HomeProcessSection />
   </div>
 </template>
