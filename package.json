@@ -19,7 +19,8 @@
     "@nuxt/ui": "^4.4.0",
     "@unhead/vue": "^2.1.2",
     "nuxt": "^4.2.2",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.13.0",

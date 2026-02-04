@@ -39,7 +39,10 @@ prêt pour les évolutions futures de votre projet.
 </script>
 
 <template>
-  <UPageSection orientation="horizontal">
+  <UPageSection
+    orientation="horizontal"
+    class="bg-elevated"
+  >
     <template #headline>
       <div class="text-primary font-semibold">
         Work Process

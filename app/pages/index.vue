@@ -5,5 +5,6 @@
     <HomeServiceSection />
     <HomeProcessSection />
     <HomePortfolioSection />
+    <HomeContactSection />
   </div>
 </template>

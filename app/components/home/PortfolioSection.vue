@@ -30,6 +30,7 @@
           <NuxtImg
             src="/images/home/portfolio-1.png"
             alt="Portfolio"
+            class="w-full"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -49,6 +50,7 @@
           <NuxtImg
             src="/images/home/portfolio-2.png"
             alt="Portfolio"
+            class="w-full"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -68,6 +70,7 @@
           <NuxtImg
             src="/images/home/portfolio-3.png"
             alt="Portfolio"
+            class="w-full"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -87,6 +90,7 @@
           <NuxtImg
             src="/images/home/portfolio-4.png"
             alt="Portfolio"
+            class="w-full"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
