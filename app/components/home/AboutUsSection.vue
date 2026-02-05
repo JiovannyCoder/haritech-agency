@@ -2,49 +2,49 @@
   <UPageSection>
     <template #headline>
       <div class="text-primary font-semibold">
-        About Us
+        À propos
       </div>
     </template>
     <template #title>
-      <h2 class="text-left md:max-w-3/5 leading-tight">
-        Smart, fast, <span class="text-muted">and Creative - Modality delivers purposeful digital Experience.</span>
+      <h2 class="text-left md:max-w-4/5 leading-tight">
+        Des expériences web<span class="text-muted"> conçues pour simplifier, automatiser et faire grandir votre activité.</span>
       </h2>
     </template>
     <UPageGrid>
       <UPageCard
-        orientation="horizontal"
+        orientation="vertical"
         spotlight
         spotlight-color="primary"
         class="bg-accented"
       >
         <div class="h-[228px] p-4 flex flex-col">
-          <p><b>4x</b> settings blocked</p>
+          <p>Projets livrés rapidement</p>
           <h3 class="text-5xl font-bold mt-auto">
             4x
           </h3>
         </div>
       </UPageCard>
       <UPageCard
-        orientation="horizontal"
+        orientation="vertical"
         spotlight
         spotlight-color="primary"
         class="bg-accented"
       >
         <div class="h-[228px] p-4 flex flex-col">
-          <p><b>2x</b> settings blocked</p>
+          <p>Stratégies digitales efficaces</p>
           <h3 class="text-5xl font-bold mt-auto">
             2x
           </h3>
         </div>
       </UPageCard>
       <UPageCard
-        orientation="horizontal"
+        orientation="vertical"
         spotlight
         spotlight-color="primary"
         class="bg-accented"
       >
         <div class="h-[228px] p-4 flex flex-col">
-          <p><b>4x</b> settings blocked</p>
+          <p>Croissance client accélérée</p>
           <h3 class="text-5xl font-bold mt-auto">
             400%
           </h3>
@@ -52,14 +52,14 @@
       </UPageCard>
     </UPageGrid>
     <UPageGrid>
-      <h4 class="text-3xl">
-        / Results Driven  Solutions
+      <h4 class="text-2xl">
+        / Solutions orientées résultats
       </h4>
-      <h4 class="text-3xl">
-        / Strategic Experiences
+      <h4 class="text-2xl">
+        / Expériences stratégiques
       </h4>
-      <h4 class="text-3xl">
-        / Purposeful Designs
+      <h4 class="text-2xl">
+        / Designs pensés pour performer
       </h4>
     </UPageGrid>
   </UPageSection>

@@ -1,21 +1,21 @@
 <template>
   <UPageHero orientation="vertical">
     <template #title>
-      <h1 class="text-left md:w-[75%] lg:text-9xl! md:text-7xl! text-6xl!">
-        We Build <br><span class="italic font-normal font-serif">— Brands</span> that Stand out
+      <h1 class="text-left md:w-[90%] leading-tight lg:text-8xl! md:text-6xl! text-5xl!">
+        Nous créons <br><span class="italic font-normal font-serif">— des Solutions Digitales </span> qui se démarquent
       </h1>
     </template>
     <template #description>
       <div class="flex items-center justify-end md:flex-row flex-col gap-5 mt-12">
         <p class="text-left md:w-[60%]">
-          Easily connect your SEO-optimized content to your  Wordpress effortless publishing — <span class="text-primary">Helping you stay consistant</span>, save time and grow faster
+          Sites web et applications optimisés SEO, pensés pour gagner du temps, <span class="text-primary">attirer des prospects et faire évoluer votre activité.</span>
         </p>
         <UButton
           trailing-icon="i-lucide-arrow-right"
           size="xl"
           class="md:mr-0 mr-auto md:mt-0 mt-7"
         >
-          Let's Talk
+          Discutons
         </UButton>
       </div>
     </template>
