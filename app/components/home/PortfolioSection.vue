@@ -6,7 +6,7 @@
       </div>
     </template>
     <template #title>
-      <div class="max-w-1/2 text-left  ml-auto ">
+      <div class="md:max-w-1/2 text-left  ml-auto ">
         <h2 class="leading-tight ">
           See Our <span class="italic font-normal font-serif">All Latest</span> <br>
           Creative Work
@@ -22,7 +22,7 @@
       </div>
     </template>
     <UPageGrid>
-      <div class=" md:col-span-2">
+      <div class="md:col-span-2">
         <UCard
           variant="soft"
           class="h-full"
@@ -30,7 +30,7 @@
           <NuxtImg
             src="/images/home/portfolio-1.png"
             alt="Portfolio"
-            class="w-full"
+            class="w-full rounded"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -42,7 +42,7 @@
           </div>
         </UCard>
       </div>
-      <div>
+      <div class="md:col-span-1">
         <UCard
           variant="soft"
           class="h-full"
@@ -50,7 +50,7 @@
           <NuxtImg
             src="/images/home/portfolio-2.png"
             alt="Portfolio"
-            class="w-full"
+            class="w-full rounded"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -62,7 +62,7 @@
           </div>
         </UCard>
       </div>
-      <div>
+      <div class="md:col-span-1">
         <UCard
           variant="soft"
           class="h-full"
@@ -70,7 +70,7 @@
           <NuxtImg
             src="/images/home/portfolio-3.png"
             alt="Portfolio"
-            class="w-full"
+            class="w-full rounded"
           />
           <div>
             <div class="text-lg mt-5 mb-2">
@@ -90,7 +90,7 @@
           <NuxtImg
             src="/images/home/portfolio-4.png"
             alt="Portfolio"
-            class="w-full"
+            class="w-full rounded"
           />
           <div>
             <div class="text-lg mt-5 mb-2">

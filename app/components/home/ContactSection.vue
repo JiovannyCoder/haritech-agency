@@ -50,7 +50,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     orientation="horizontal"
   >
     <template #title>
-      <h2 class="leading-tight ">
+      <h2 class="leading-tight">
         Have a Project in Mind ? <br>
         - Let's Talk
       </h2>
@@ -70,7 +70,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     <UForm
       :schema="schema"
       :state="state"
-      class="space-y-4 bg-elevated rounded-2xl p-10"
+      class="space-y-4 bg-elevated rounded-2xl md:p-10 p-5"
       @submit="onSubmit"
     >
       <div>

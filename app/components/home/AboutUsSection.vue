@@ -6,7 +6,7 @@
       </div>
     </template>
     <template #title>
-      <h2 class="text-left max-w-3/5 leading-tight">
+      <h2 class="text-left md:max-w-3/5 leading-tight">
         Smart, fast, <span class="text-muted">and Creative - Modality delivers purposeful digital Experience.</span>
       </h2>
     </template>

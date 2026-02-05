@@ -26,14 +26,17 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UHeader>
+  <UHeader mode="slideover">
     <template #title>
       <div>
         <AppLogo />
       </div>
     </template>
 
-    <UNavigationMenu :items="items" />
+    <UNavigationMenu
+      :items="items"
+      variant="link"
+    />
 
     <template #right>
       <UColorModeButton />
@@ -43,6 +46,14 @@ const items = computed<NavigationMenuItem[]>(() => [
       >
         Let's Talk
       </UButton>
+    </template>
+
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
   </UHeader>
 </template>

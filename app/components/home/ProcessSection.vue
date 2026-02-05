@@ -68,7 +68,7 @@ prêt pour les évolutions futures de votre projet.
       <UAccordion
         :items="processSteps"
         :ui="{
-          label: 'text-2xl py-5'
+          label: 'md:text-2xl text-xl py-5'
         }"
       >
         <template #leading="{ index }">
