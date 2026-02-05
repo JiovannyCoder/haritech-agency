@@ -64,6 +64,7 @@ et prêt à accompagner la croissance et les évolutions futures de votre projet
         <UButton
           trailing-icon="i-lucide-arrow-right"
           size="xl"
+          href="#contact"
         >
           Discutons
         </UButton>

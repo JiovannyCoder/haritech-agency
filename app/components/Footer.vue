@@ -86,7 +86,7 @@ const columns: FooterColumn[] = [
     </template>
     <template #left>
       <p class="text-muted text-sm text-center">
-        © {{ new Date().getFullYear() }} Haritech Agency — marque exploitée par Razafimaniraka Haritina Jiovanny
+        © {{ new Date().getFullYear() }} Haritech Agency — marque exploitée par Haritina Jiovanny
       </p>
     </template>
   </UFooter>

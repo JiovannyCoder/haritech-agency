@@ -1,35 +1,39 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxt/image',
-    '@nuxt/scripts'
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/image",
+    "@nuxt/scripts"
   ],
 
   devtools: {
     enabled: true
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
   colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
-    storageKey: 'app-color-mode'
+    preference: "dark",
+    fallback: "dark",
+    storageKey: "app-color-mode"
+  },
+
+  runtimeConfig: {
+    googleFormUrl: ""
   },
 
   routeRules: {
-    '/': { prerender: true }
+    "/": { prerender: true }
   },
 
-  compatibilityDate: '2025-01-15',
+  compatibilityDate: "2025-01-15",
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs',
-        quotes: 'double'
+        commaDangle: "never",
+        braceStyle: "1tbs",
+        quotes: "double"
       }
     }
   }

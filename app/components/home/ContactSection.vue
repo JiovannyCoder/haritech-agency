@@ -1,48 +1,62 @@
 <script setup lang="ts">
 import { object, string } from "yup"
-import type { InferType } from "yup"
-import type { FormSubmitEvent } from "@nuxt/ui"
 
 const schema = object({
   name: string()
     .trim()
     .min(3, "Le nom doit contenir au moins 3 caractères")
-    .required("Le nom est obligatoire"),
+    .required("Veuillez renseigner votre nom"),
 
   email: string()
     .email("L'email doit être valide")
-    .required("L'email est obligatoire"),
+    .required("Veuillez renseigner votre email"),
 
   service: string()
-    .required("Le service est obligatoire"),
+    .required("Veuillez renseigner le service demandé"),
 
   description: string()
     .trim()
     .min(3, "La description doit contenir au moins 3 caractères")
-    .required("La description est obligatoire")
+    .required("Veuillez renseigner une petite description de votre idée")
 })
-
-type Schema = InferType<typeof schema>
-
-const state = reactive({
+const initialState = {
   name: undefined,
   email: undefined,
-  service: "Development",
+  service: undefined,
   description: undefined
-})
+}
+const state = reactive({ ...initialState })
 
 const serviceOptions = [
-  "Branding Service",
-  "UI/UX Design",
-  "Development"
+  "Sites Vitrines & Landing Pages",
+  "Mini E-commerce",
+  "Applications Web Sur-Mesure",
+  "Dashboards & Analytics"
 ]
 
 const toast = useToast()
 
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: "Success", description: "The form has been submitted.", color: "success" })
-  console.log(event.data)
+async function onSubmit() {
+  execute()
 }
+
+const { execute, pending } = useFetch("/api/contact", {
+  method: "POST",
+  body: state,
+  watch: false,
+  immediate: false,
+  onResponse({ response }) {
+    if (response.status === 204) {
+      toast.add({
+        title: "Message envoyé !",
+        description: "Votre message a bien été envoyé ! Nous vous répondrons bientôt.",
+        color: "success"
+      })
+      // reset form
+      Object.assign(state, initialState)
+    }
+  }
+})
 </script>
 
 <template>
@@ -65,8 +79,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     <template #links>
       <UButton
         color="neutral"
-        trailing-icon="i-lucide-arrow-right"
+        leading-icon="i-lucide-phone"
         size="xl"
+        to="tel:+261382862245"
+        target="_blank"
       >
         Contactez-nous
       </UButton>
@@ -132,6 +148,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         size="xl"
         type="submit"
         leading-icon="i-lucide-send"
+        :loading="pending"
       >
         Envoyer
       </UButton>

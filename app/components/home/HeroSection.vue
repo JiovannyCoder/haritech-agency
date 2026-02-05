@@ -14,6 +14,7 @@
           trailing-icon="i-lucide-arrow-right"
           size="xl"
           class="md:mr-0 mr-auto md:mt-0 mt-7"
+          href="#contact"
         >
           Discutons
         </UButton>
