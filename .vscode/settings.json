@@ -3,7 +3,7 @@
   "editor.formatOnSave": false, // Important : ESLint gère la sauvegarde via codeActionsOnSave
 
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Vue.volar"
   },
 
   "eslint.format.enable": true,

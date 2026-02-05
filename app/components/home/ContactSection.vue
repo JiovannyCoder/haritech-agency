@@ -47,16 +47,20 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <UPageSection
+    id="contact"
     orientation="horizontal"
   >
     <template #title>
       <h2 class="leading-tight">
-        Have a Project in Mind ? <br>
-        - Let's Talk
+        Un projet en tête ? <br>
+        — Parlons-en
       </h2>
     </template>
     <template #description>
-      <p>Good design isn't just  about aesthetics, it's about results. Learn how thought UX strengh can turn visitors into loyal customers</p>
+      <p>
+        Le design efficace ne fait pas que séduire : il convertit.
+        Une expérience utilisateur solide transforme l’intérêt en engagement durable.
+      </p>
     </template>
     <template #links>
       <UButton
@@ -64,7 +68,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         trailing-icon="i-lucide-arrow-right"
         size="xl"
       >
-        Let's Talk
+        Contactez-nous
       </UButton>
     </template>
     <UForm
@@ -75,7 +79,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     >
       <div>
         <h3 class="text-xl font-bold mb-4">
-          Schedule a Free Consultation
+          Planifier une consultation gratuite
         </h3>
         <USeparator />
       </div>

@@ -40,7 +40,7 @@ const services = [
 </script>
 
 <template>
-  <UPageSection>
+  <UPageSection id="nos-services">
     <template #headline>
       <div class="text-primary font-semibold">
         Nos Services
@@ -48,14 +48,17 @@ const services = [
     </template>
     <template #title>
       <h2 class="text-left md:max-w-3/5 leading-tight ml-auto">
-        Solutions <span class="text-muted"><span class="text-primary">sur-mesure </span> pour développer et faire prospérer votre business</span>
+        Solutions <span class="text-muted"><span class="text-primary">sur-mesure </span> pour développer et faire
+          prospérer votre business</span>
       </h2>
     </template>
     <template v-for="(service, i) in services">
       <UPageGrid>
         <div>
-          <div class="md:text-2xl text-xl font-bold h-10 w-10 flex justify-center items-center rounded-full border-primary border">
-            0{{ i+1 }}
+          <div
+            class="md:text-2xl text-xl font-bold h-10 w-10 flex justify-center items-center rounded-full border-primary border"
+          >
+            0{{ i + 1 }}
           </div>
           <h3 class="md:text-4xl text-2xl font-semibold mt-10">
             {{ service.title }}
@@ -63,7 +66,7 @@ const services = [
         </div>
         <div class=" md:pb-10">
           <NuxtImg
-            :src="`/images/home/service-${i+1}.webp`"
+            :src="`/images/home/service-${i + 1}.webp`"
             :alt="service.title"
             class="rounded-2xl object-cover h-full w-full"
           />

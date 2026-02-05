@@ -1,15 +1,20 @@
 <template>
-  <UPageSection>
+  <UPageSection id="a-propos-de-nous">
     <template #headline>
       <div class="text-primary font-semibold">
-        À propos
+        À propos de nous
       </div>
     </template>
+
     <template #title>
       <h2 class="text-left md:max-w-4/5 leading-tight">
-        Des expériences web<span class="text-muted"> conçues pour simplifier, automatiser et faire grandir votre activité.</span>
+        Des expériences web
+        <span class="text-muted">
+          pensées pour simplifier, automatiser et accélérer la croissance de votre activité.
+        </span>
       </h2>
     </template>
+
     <UPageGrid>
       <UPageCard
         orientation="vertical"

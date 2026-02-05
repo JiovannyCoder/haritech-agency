@@ -1,62 +1,46 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, FooterColumn } from "@nuxt/ui"
+import type { FooterColumn } from "@nuxt/ui"
 
 const columns: FooterColumn[] = [
   {
-    label: "Services",
+    label: "Nos Services",
     children: [
       {
-        label: "UI/UX Experiences",
-        to: "#"
+        label: "Sites Vitrines & Landing Pages",
+        href: "#nos-services"
       },
       {
-        label: "Web Design",
-        to: "#"
+        label: "Mini E-commerce",
+        href: "#nos-services"
       },
       {
-        label: "App Development",
-        to: "#"
+        label: "Applications Web Sur-Mesure",
+        href: "#nos-services"
       },
       {
-        label: "Modern Design",
-        to: "#"
-      },
-      {
-        label: "Landing Page",
-        to: "#"
-      },
-      {
-        label: "Careers",
-        to: "#"
+        label: "Dashboards & Analytics",
+        href: "#nos-services"
       }
     ]
   },
   {
-    label: "Company",
+    label: "Navigation",
     children: [
       {
-        label: "Home",
+        label: "Accueil",
         to: "/"
       },
       {
-        label: "About Us",
-        to: "#"
-      },
-      {
         label: "Services",
-        to: "#"
+        href: "#nos-services"
       },
       {
-        label: "Blog",
-        to: "#"
+        label: "A propos",
+        href: "#a-propos-de-nous"
       },
       {
-        label: "Contact Us",
-        to: "#"
-      },
-      {
-        label: "Content Creation",
-        to: "#"
+        label: "Contact",
+        href: "#contact"
       }
     ]
   }
@@ -71,7 +55,7 @@ const columns: FooterColumn[] = [
           <template #left>
             <div>
               <h3 class="text-sm font-semibold">
-                Follow Us On
+                Suivez-nous Sur
               </h3>
               <div class="mt-4">
                 <UButton
@@ -79,12 +63,16 @@ const columns: FooterColumn[] = [
                   color="neutral"
                   variant="ghost"
                   size="xl"
+                  to="https://facebook.com/haritechagency"
+                  target="_blank"
                 />
                 <UButton
                   icon="i-simple-icons-whatsapp"
                   color="neutral"
                   variant="ghost"
                   size="xl"
+                  to="https://wa.me/261382862245"
+                  target="_blank"
                 />
               </div>
             </div>
@@ -97,8 +85,8 @@ const columns: FooterColumn[] = [
       <AppLogo />
     </template>
     <template #left>
-      <p class="text-muted text-sm">
-        Copyright © {{ new Date().getFullYear() }} tout droit reservé.
+      <p class="text-muted text-sm text-center">
+        © {{ new Date().getFullYear() }} Haritech Agency — marque exploitée par Razafimaniraka Haritina Jiovanny
       </p>
     </template>
   </UFooter>

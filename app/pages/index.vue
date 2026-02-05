@@ -4,7 +4,7 @@
     <HomeAboutUsSection />
     <HomeServiceSection />
     <HomeProcessSection />
-    <HomePortfolioSection />
+    <!-- <HomePortfolioSection /> -->
     <HomeContactSection />
   </div>
 </template>

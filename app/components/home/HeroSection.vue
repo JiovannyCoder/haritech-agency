@@ -20,7 +20,7 @@
       </div>
     </template>
 
-    <UMarquee
+    <!-- <UMarquee
       pause-on-hover
       class="[--duration:50s]"
     >
@@ -84,6 +84,6 @@
           >
         </div>
       </div>
-    </UMarquee>
+    </UMarquee> -->
   </UPageHero>
 </template>

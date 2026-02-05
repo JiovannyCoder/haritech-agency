@@ -8,25 +8,21 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
   {
     label: "Services",
-    href: "#"
+    href: "#nos-services"
   },
   {
     label: "A propos",
-    href: "#"
-  },
-  {
-    label: "Blog",
-    href: "#"
+    href: "#a-propos-de-nous"
   },
   {
     label: "Contact",
-    href: "#"
+    href: "#contact"
   }
 ])
 </script>
 
 <template>
-  <UHeader mode="slideover">
+  <UHeader mode="drawer">
     <template #title>
       <div>
         <AppLogo />
@@ -43,8 +39,9 @@ const items = computed<NavigationMenuItem[]>(() => [
       <UButton
         color="neutral"
         variant="subtle"
+        trailing-icon="i-lucide-arrow-right"
       >
-        Let's Talk
+        Discutons
       </UButton>
     </template>
 

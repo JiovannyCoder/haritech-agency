@@ -1,22 +1,22 @@
 <template>
-  <UPageSection>
+  <UPageSection id="realisations">
     <template #headline>
       <div class="text-primary font-semibold">
-        Case Studies
+        Études de cas
       </div>
     </template>
     <template #title>
       <div class="md:max-w-1/2 text-left  ml-auto ">
         <h2 class="leading-tight ">
-          See Our <span class="italic font-normal font-serif">All Latest</span> <br>
-          Creative Work
+          Des idées <span class="italic font-normal font-serif">concrètes
+          </span>transformées en résultats
         </h2>
         <div class="mt-5">
           <UButton
             trailing-icon="i-lucide-arrow-right"
             size="xl"
           >
-            Let's Talk
+            Discutons
           </UButton>
         </div>
       </div>
