@@ -4,7 +4,9 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/ui",
     "@nuxt/image",
-    "@nuxt/scripts"
+    "@nuxt/scripts",
+    "v-gsap-nuxt",
+    "nuxt-gtag"
   ],
 
   devtools: {
@@ -36,5 +38,9 @@ export default defineNuxtConfig({
         quotes: "double"
       }
     }
+  },
+
+  gtag: {
+    id: "G-WRHGTZR00H"
   }
 })
