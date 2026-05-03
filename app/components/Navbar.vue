@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui"
 
 const items = computed<NavigationMenuItem[]>(() => [
@@ -8,15 +8,20 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
   {
     label: "Services",
-    href: "#nos-services"
+    to: "#nos-services"
   },
   {
-    label: "A propos",
-    href: "#a-propos-de-nous"
+    label: "Pourquoi nous",
+    to: "#a-propos-de-nous"
   },
   {
-    label: "Contact",
-    href: "#contact"
+    label: "Tarifs",
+    to: "#contact"
+  },
+  {
+    label: "Formations",
+    to: "/formations",
+    external: true
   }
 ])
 </script>
@@ -29,28 +34,17 @@ const items = computed<NavigationMenuItem[]>(() => [
       </div>
     </template>
 
-    <UNavigationMenu
-      :items="items"
-      variant="link"
-    />
+    <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
       <UColorModeButton />
-      <UButton
-        color="neutral"
-        variant="subtle"
-        trailing-icon="i-lucide-arrow-right"
-      >
-        Discutons
+      <UButton>
+        Devis gratuit
       </UButton>
     </template>
 
     <template #body>
-      <UNavigationMenu
-        :items="items"
-        orientation="vertical"
-        class="-mx-2.5"
-      />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
 </template>

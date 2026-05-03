@@ -30,11 +30,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <HomeHeroSection />
-    <HomeAboutUsSection />
-    <HomeServiceSection />
-    <HomeProcessSection />
-    <!-- <HomePortfolioSection /> -->
-    <HomeContactSection />
+    home page
   </div>
 </template>
