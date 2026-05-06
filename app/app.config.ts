@@ -6,7 +6,7 @@ export default defineAppConfig({
     },
     button: {
       slots: {
-        base: "rounded-none transition-all duration-400 cursor-pointer ",
+        base: "rounded-none transition-all sm:duration-400 cursor-pointer ",
       },
       variants: {
         size: {
@@ -22,7 +22,7 @@ export default defineAppConfig({
         {
           color: "primary",
           variant: "solid",
-          class: "hover:bg-secondary",
+          class: "border-1 border-primary dark:border-white hover:bg-secondary",
         },
         {
           color: "secondary",
@@ -33,13 +33,13 @@ export default defineAppConfig({
           color: "secondary",
           variant: "outline",
           size: "xl",
-          class: "border-1",
+          class: "sm:border-1",
         },
         {
           color: "primary",
           variant: "outline",
           size: "xl",
-          class: "border-1",
+          class: "sm:border-1",
         },
       ],
     },

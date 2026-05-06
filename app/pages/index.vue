@@ -29,7 +29,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    home page
-  </div>
+  <UPage class="scroll-smooth">
+    <SectionsHomeHero />
+  </UPage>
 </template>

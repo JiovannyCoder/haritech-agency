@@ -38,7 +38,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     <template #right>
       <UColorModeButton />
-      <UButton>
+      <UButton class="hidden md:flex">
         Devis gratuit
       </UButton>
     </template>
