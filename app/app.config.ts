@@ -94,5 +94,11 @@ export default defineAppConfig({
         },
       },
     },
+    pageSection: {
+      slots: {
+        headline:
+          "bg-primary px-4 py-1 w-max mx-auto uppercase font-normal! text-white! text-sm",
+      },
+    },
   },
 });
