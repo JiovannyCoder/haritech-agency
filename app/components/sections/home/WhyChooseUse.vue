@@ -3,32 +3,32 @@ const advantages: Advantage[] = [
     {
         title: "Facturation Internationale",
         description: "Factures EUR/USD. IBAN européen. Paiements Stripe, Wise, virement SEPA. TVA intracommunautaire.",
-        icon: "mdi-cog"
+        icon: "ri-money-dollar-circle-line"
     },
     {
         title: "Contrats Solides",
         description: "NDA systématique. Contrats en français/anglais. Propriété intellectuelle garantie. RGPD compliant.",
-        icon: "mdi-account-group"
+        icon: "ri-file-check-line"
     },
     {
         title: "Timezone Compatible",
         description: "GMT+3 (1h d'écart avec Paris). Disponibilité 9h-18h heure française. Réunions Zoom quotidiennes.",
-        icon: "mdi-check-circle"
+        icon: "ri-time-line"
     },
     {
         title: "Communication Fluide",
         description: "Français natif. Anglais professionnel. Slack, Teams, ou votre outil préféré. Daily standups inclus.",
-        icon: "mdi-check-circle"
+        icon: "ri-global-line"
     },
     {
         title: "Expertise Certifiée",
         description: "Master Génie Logiciel. 5+ ans d'expérience. Formation continue. Veille technologique active.",
-        icon: "mdi-check-circle"
+        icon: "ri-award-line"
     },
     {
         title: "Qualité Garantie",
         description: "Code reviews systématiques. Tests automatisés. CI/CD. Documentation exhaustive. Support post-livraison.",
-        icon: "mdi-check-circle"
+        icon: "ri-shield-check-line"
     },
 ];
 </script>
