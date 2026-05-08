@@ -12,7 +12,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
   {
     label: "Pourquoi nous",
-    to: "#a-propos-de-nous"
+    to: "#pourquoi-nous"
   },
   {
     label: "Tarifs",

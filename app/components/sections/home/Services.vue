@@ -52,7 +52,7 @@ const services: Service[] = [
 </script>
 
 <template>
-    <UPageSection class="bg-elevated/80" id="services" title="Des formules adaptées à chaque besoin"
+    <UPageSection class="bg-elevated/60" id="nos-services" title="Des formules adaptées à chaque besoin"
         description="Facturation transparente. Contrats flexibles. Aucun frais caché." headline="Nos Services">
         <div class="grid sm:grid-cols-2 grid-cols-1 gap-8">
             <CardsService :service="service" v-for="service in services" :key="service.title" />

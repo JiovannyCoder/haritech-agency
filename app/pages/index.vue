@@ -32,5 +32,6 @@ useSeoMeta({
   <UPage class="scroll-smooth">
     <SectionsHomeHero />
     <SectionsHomeServices />
+    <SectionsHomeWhyChooseUse />
   </UPage>
 </template>
