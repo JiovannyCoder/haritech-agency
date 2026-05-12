@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonProps } from '@nuxt/ui';
+import { gsap } from 'gsap'
 
 const links = ref<ButtonProps[]>([
     {
@@ -15,7 +16,6 @@ const links = ref<ButtonProps[]>([
         color: "secondary",
         size: "xl"
     }
-
 ]);
 
 const garantees = [
@@ -32,6 +32,30 @@ const garantees = [
         subtitle: "Sprints 2 semaines, code reviews, support post-prod"
     }
 ]
+
+const statsContainer = useTemplateRef<HTMLElement>('stats-container')
+const garanteesContainer = useTemplateRef<HTMLElement>('garantees-container')
+
+onMounted(() => {
+    if (!garanteesContainer.value || !statsContainer.value) return
+
+    const tl = gsap.timeline()
+
+    tl.from(garanteesContainer.value.children, {
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out'
+    })
+        .from(statsContainer.value.children, {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power3.out'
+        }, "-=0.3")
+})
 </script>
 
 <template>
@@ -55,7 +79,7 @@ const garantees = [
             <div class="flex items-center sm:gap-6 gap-4 flex-wrap">
                 <UButton v-for="link in links" v-bind="link" class="grow justify-center sm:grow-0"></UButton>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:mt-12 mt-10">
+            <div ref="stats-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:mt-12 mt-10">
                 <div>
                     <h4 class="font-bold text-primary text-2xl sm:text-3xl">-60%</h4>
                     <p class="text-neutral-500">vs. Europe/USA</p>
@@ -75,7 +99,7 @@ const garantees = [
             <NuxtImg class="absolute top-0 left-0 z-10 w-full h-full object-cover brightness-90"
                 src="/images/home/bg-hero.jpg">
             </NuxtImg>
-            <div class="flex flex-col gap-4 mt-auto w-full z-20">
+            <div ref="garantees-container" class="flex flex-col gap-4 mt-auto w-full z-20">
                 <div v-for="garentee in garantees" :key="garentee.title" class="flex gap-4 p-4 bg-default">
                     <UAvatar size="3xl" icon="lucide-check"></UAvatar>
                     <div>
