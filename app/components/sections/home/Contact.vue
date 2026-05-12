@@ -112,7 +112,7 @@ const { execute, pending } = useFetch("/api/contact", {
             <UInput v-model="state.company" placeholder="Votre entreprise"></UInput>
           </UFormField>
           <UFormField label="Téléphone" name="phone">
-            <UInput v-model="state.phone" placeholder="+261 XX XX XXX XX"></UInput>
+            <UInput v-model="state.phone" placeholder="Ex: +33 6 12 34 56 78"></UInput>
           </UFormField>
           <UFormField label="Type de projet *" name="projectType" class="col-span-full">
             <USelect v-model="state.projectType" :items="projectTypes" placeholder="Sélétionnez un type"></USelect>
