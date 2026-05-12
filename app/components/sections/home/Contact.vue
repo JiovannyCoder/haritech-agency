@@ -4,16 +4,16 @@ import { contactSchema } from "#shared/validations/contact";
 
 const contacts: ContactInfo[] = [
   {
-    icon: "lucide-phone",
-    title: "Téléphone",
-    description: "+261 38 28 622 45",
-    link: "tel:+261382862245"
-  },
-  {
     icon: "lucide-mail",
     title: "Email",
     description: "contact@haritechagency.com",
     link: "mailto:contact@haritechagency.com"
+  },
+  {
+    icon: "lucide-facebook",
+    title: "Facebook",
+    description: "Page Haritech Agency",
+    link: "https://facebook.com/haritechagency"
   },
   {
     icon: "lucide-map-pin",

@@ -52,7 +52,7 @@ const columns: FooterColumn[] = [
     label: "Contact",
     children: [
       {
-        label: "Haritech Agency Page",
+        label: "Page Haritech Agency",
         href: "https://facebook.com/haritechagency",
         icon: "i-simple-icons-facebook",
         target: "_blank"
@@ -61,11 +61,6 @@ const columns: FooterColumn[] = [
         label: "contact@haritechagency.com",
         href: "mailto:contact@haritechagency.com",
         icon: "lucide-mail"
-      },
-      {
-        label: "+261 38 28 622 45",
-        href: "https://wa.me/261382862245",
-        icon: "i-simple-icons-whatsapp"
       },
       {
         label: "Antananarivo, Madagascar",
