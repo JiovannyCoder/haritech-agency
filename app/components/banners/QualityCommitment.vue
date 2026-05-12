@@ -1,6 +1,6 @@
 <template>
     <div class="sm:p-12 p-8 bg-secondary text-white">
-        <div class="grid sm:grid-cols-2 grid-cols-1 gap-8 items-center">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-8 items-center">
             <div>
                 <h3 class="text-2xl font-semibold mb-6">Notre engagement qualité</h3>
                 <p class="text-neutral-300">Chaque ligne de code est revue. Chaque fonctionnalité est testée. Chaque

@@ -23,7 +23,7 @@ const { service } = toRefs(props);
             <h4 class="uppercase text-sm mb-4">Inclus </h4>
             <div class="flex flex-col gap-2">
                 <div v-for="feature in service.features" :key="feature" class="flex items-center gap-2">
-                    <UIcon name="ri-check-line" class="text-primary" />
+                    <UIcon name="lucide-check" class="text-primary" />
                     <div>{{ feature }}</div>
                 </div>
             </div>

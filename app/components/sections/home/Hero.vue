@@ -4,7 +4,7 @@ import type { ButtonProps } from '@nuxt/ui';
 const links = ref<ButtonProps[]>([
     {
         label: "Demander un devis",
-        trailingIcon: "ri-arrow-right-line",
+        trailingIcon: "lucide-arrow-right",
         to: "#contact",
         size: "xl"
     },
@@ -43,7 +43,7 @@ const garantees = [
             description: 'sm:text-lg text-md'
         }">
         <template #headline>
-            <UBadge size="lg" variant="soft" leading-icon="ri-shield-line" :ui="{
+            <UBadge size="lg" variant="soft" leading-icon="lucide-shield" :ui="{
                 leadingIcon: 'text-primary',
                 label: 'uppercase',
                 base: 'uppercase bg-muted py-2 px-4 rounded-none tracking-wider text-xs sm:text-sm'
@@ -77,7 +77,7 @@ const garantees = [
             </NuxtImg>
             <div class="flex flex-col gap-4 mt-auto w-full z-20">
                 <div v-for="garentee in garantees" :key="garentee.title" class="flex gap-4 p-4 bg-default">
-                    <UAvatar size="3xl" icon="ri-check-line"></UAvatar>
+                    <UAvatar size="3xl" icon="lucide-check"></UAvatar>
                     <div>
                         <h4 class="font-semibold">{{ garentee.title }}</h4>
                         <p class="text-neutral-500 text-sm">{{ garentee.subtitle }}</p>
