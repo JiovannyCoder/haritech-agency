@@ -72,11 +72,43 @@ export default defineAppConfig({
     input: {
       slots: {
         base: "rounded-none",
+        root: "w-full",
       },
       variants: {
         size: {
           lg: {
-            base: "p-3.5 text-md font-normal",
+            base: "p-3.5 text-md font-normal mt-2",
+          },
+        },
+      },
+      defaultVariants: {
+        size: "lg",
+      },
+    },
+    textarea: {
+      slots: {
+        base: "rounded-none",
+        root: "w-full",
+      },
+      variants: {
+        size: {
+          lg: {
+            base: "p-3.5 text-md font-normal mt-2",
+          },
+        },
+      },
+      defaultVariants: {
+        size: "lg",
+      },
+    },
+    select: {
+      slots: {
+        base: "rounded-none w-full",
+      },
+      variants: {
+        size: {
+          lg: {
+            base: "p-3.5 text-md font-normal mt-2",
           },
         },
       },

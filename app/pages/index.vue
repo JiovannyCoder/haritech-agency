@@ -34,5 +34,6 @@ useSeoMeta({
     <SectionsHomeServices />
     <SectionsHomeWhyChooseUse />
     <SectionsHomePricing />
+    <SectionsHomeContact />
   </UPage>
 </template>

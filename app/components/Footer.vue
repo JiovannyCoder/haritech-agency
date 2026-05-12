@@ -48,32 +48,22 @@ const columns: FooterColumn[] = [
 </script>
 
 <template>
-  <UFooter class="bg-elevated">
+  <UFooter class="dark bg-neutral-950">
     <template #top>
       <UContainer>
-        <UFooterColumns :columns="columns">
+        <UFooterColumns :ui="{
+          label: 'dark:text-white'
+        }" :columns="columns">
           <template #left>
             <div>
-              <h3 class="text-sm font-semibold">
+              <h3 class="dark:text-white text-sm font-semibold">
                 Suivez-nous Sur
               </h3>
               <div class="mt-4">
-                <UButton
-                  icon="i-simple-icons-facebook"
-                  color="neutral"
-                  variant="ghost"
-                  size="xl"
-                  to="https://facebook.com/haritechagency"
-                  target="_blank"
-                />
-                <UButton
-                  icon="i-simple-icons-whatsapp"
-                  color="neutral"
-                  variant="ghost"
-                  size="xl"
-                  to="https://wa.me/261382862245"
-                  target="_blank"
-                />
+                <UButton icon="i-simple-icons-facebook" color="neutral" variant="ghost" size="xl"
+                  to="https://facebook.com/haritechagency" target="_blank" />
+                <UButton icon="i-simple-icons-whatsapp" color="neutral" variant="ghost" size="xl"
+                  to="https://wa.me/261382862245" target="_blank" />
               </div>
             </div>
           </template>
