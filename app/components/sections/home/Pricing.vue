@@ -62,5 +62,8 @@ const pricingPlans: Pricing[] = [
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 sm:gap-8 gap-4">
             <CardsPricing v-for="pricing in pricingPlans" :key="pricing.title" :pricing="pricing" />
         </div>
+        <div>
+            <BannersPaymentAndTerms />
+        </div>
     </UPageSection>
 </template>
