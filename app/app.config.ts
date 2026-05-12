@@ -129,7 +129,9 @@ export default defineAppConfig({
     pageSection: {
       slots: {
         headline:
-          "bg-primary px-4 py-1 w-max mx-auto uppercase font-normal! text-white! text-sm tracking-wider",
+          "bg-primary px-4 py-1 w-max md:mx-auto uppercase font-normal! text-white! text-sm tracking-wider",
+        title: "md:text-center! text-left! font-semibold",
+        description: "md:text-center! text-left!",
       },
     },
   },
