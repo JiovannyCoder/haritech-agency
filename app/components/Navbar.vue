@@ -4,24 +4,23 @@ import type { NavigationMenuItem } from "@nuxt/ui"
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Accueil",
-    to: "/"
+    to: "/",
+    exactHash: true,
   },
   {
     label: "Services",
-    to: "#nos-services"
+    to: "/#nos-services",
+    exactHash: true,
   },
   {
     label: "Pourquoi nous",
-    to: "#pourquoi-nous"
+    to: "/#pourquoi-nous",
+    exactHash: true,
   },
   {
     label: "Tarifs",
-    to: "#contact"
-  },
-  {
-    label: "Formations",
-    to: "/formations",
-    external: true
+    to: "/#tarifs",
+    exactHash: true,
   }
 ])
 </script>
@@ -37,8 +36,8 @@ const items = computed<NavigationMenuItem[]>(() => [
     <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <UColorModeButton />
-      <UButton class="hidden md:flex">
+      <!-- <UColorModeButton /> -->
+      <UButton class="hidden md:flex" to="/#contact">
         Devis gratuit
       </UButton>
     </template>

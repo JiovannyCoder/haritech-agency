@@ -6,26 +6,26 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/scripts",
     "v-gsap-nuxt",
-    "nuxt-gtag"
+    "nuxt-gtag",
   ],
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   css: ["~/assets/css/main.css"],
   colorMode: {
-    preference: "dark",
-    fallback: "dark",
-    storageKey: "app-color-mode"
+    preference: "light",
+    fallback: "light",
+    storageKey: "app-color-mode",
   },
 
   runtimeConfig: {
-    googleFormUrl: ""
+    googleFormUrl: "",
   },
 
   routeRules: {
-    "/": { prerender: true }
+    "/": { prerender: true },
   },
 
   compatibilityDate: "2025-01-15",
@@ -35,12 +35,12 @@ export default defineNuxtConfig({
       stylistic: {
         commaDangle: "never",
         braceStyle: "1tbs",
-        quotes: "double"
-      }
-    }
+        quotes: "double",
+      },
+    },
   },
 
   gtag: {
-    id: "G-WRHGTZR00H"
-  }
-})
+    id: "G-WRHGTZR00H",
+  },
+});

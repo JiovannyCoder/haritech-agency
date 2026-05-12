@@ -8,7 +8,7 @@ useSeoMeta({
 
   keywords: "Haritech Agency, Haritina Jiovanny, Développeur Full-Stack Madagascar, Expert Laravel, Expert Nuxt.js, Architecture DDD, Développement SaaS, Vue.js, Spring Boot, API REST, Clean Architecture, Freelance informatique",
 
-  ogImage: "https://haritechagency.com/og-image.png",
+  ogImage: "https://haritechagency.com/og-image.jpg",
   ogImageWidth: 1053,
   ogImageHeight: 752,
   ogImageType: "image/png",

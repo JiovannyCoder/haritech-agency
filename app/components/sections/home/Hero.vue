@@ -5,12 +5,12 @@ const links = ref<ButtonProps[]>([
     {
         label: "Demander un devis",
         trailingIcon: "lucide-arrow-right",
-        to: "#contact",
+        to: "/#contact",
         size: "xl"
     },
     {
         label: "Voir les tarifs",
-        to: "#pricing",
+        to: "/#tarifs",
         variant: "outline",
         color: "secondary",
         size: "xl"

@@ -33,10 +33,10 @@ const { pricing } = toRefs(props);
             </div>
         </div>
         <div>
-            <UButton v-if="pricing.isPopular" size="xl" class="w-full justify-center">
+            <UButton v-if="pricing.isPopular" size="xl" class="w-full justify-center" to="/#contact">
                 Demander un devis
             </UButton>
-            <UButton v-else color="secondary" size="xl" class="w-full justify-center" variant="outline">
+            <UButton v-else color="secondary" size="xl" class="w-full justify-center" variant="outline" to="/#contact">
                 Demander un devis
             </UButton>
         </div>
