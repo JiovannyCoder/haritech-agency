@@ -45,6 +45,10 @@ const columns: FooterColumn[] = [
         label: "Contact",
         to: "/#contact",
         exactHash: true,
+      },
+      {
+        label: "Politique de confidentialité",
+        to: "/politique-de-confidentialite",
       }
     ]
   },

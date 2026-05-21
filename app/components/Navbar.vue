@@ -21,6 +21,11 @@ const items = computed<NavigationMenuItem[]>(() => [
     label: "Tarifs",
     to: "/#tarifs",
     exactHash: true,
+  },
+  {
+    label: "Contact",
+    to: "/#contact",
+    exactHash: true,
   }
 ])
 </script>

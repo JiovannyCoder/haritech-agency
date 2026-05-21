@@ -127,6 +127,16 @@ const { execute, pending } = useFetch("/api/contact", {
             <UButton :loading="pending" type="submit" color="primary" trailing-icon="lucide-send"
               class="w-full justify-center md:hidden">Envoyer ma demande</UButton>
           </div>
+          <div class="col-span-full">
+            <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-4">
+              En soumettant ce formulaire, vous acceptez que Haritech Agency traite vos données pour répondre à votre
+              demande.
+              Pour en savoir plus, consultez notre
+              <NuxtLink to="/politique-de-confidentialite" class="text-primary-500 hover:underline font-medium">
+                Politique de Confidentialité
+              </NuxtLink>.
+            </p>
+          </div>
         </UForm>
       </div>
       <div class="flex flex-col flex-wrap gap-6">
