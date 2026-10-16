@@ -33,7 +33,7 @@ useSeoMeta({
     <SectionsHomeHero />
     <SectionsHomeServices />
     <SectionsHomeWhyChooseUse />
-    <SectionsHomePricing />
+    <!-- <SectionsHomePricing /> -->
     <SectionsHomeContact />
   </UPage>
 </template>
