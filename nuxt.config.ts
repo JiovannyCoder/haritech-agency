@@ -43,4 +43,7 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-WRHGTZR00H",
   },
+  future: {
+    compatibilityVersion: 4,
+  },
 });
