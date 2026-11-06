@@ -41,36 +41,22 @@
 }
 
 :root {
-  --ui-primary: var(--color-brand-500);
-
-  --color-primary-50: var(--color-brand-50);
-  --color-primary-100: var(--color-brand-100);
-  --color-primary-200: var(--color-brand-200);
-  --color-primary-300: var(--color-brand-300);
-  --color-primary-400: var(--color-brand-400);
-  --color-primary-500: var(--color-brand-500);
-  --color-primary-600: var(--color-brand-600);
-  --color-primary-700: var(--color-brand-700);
-  --color-primary-800: var(--color-brand-800);
-  --color-primary-900: var(--color-brand-900);
-  --color-primary-950: var(--color-brand-950);
-
-  --ui-secondary: var(--color-sec-900);
-  --color-secondary-50: var(--color-sec-50);
-  --color-secondary-100: var(--color-sec-100);
-  --color-secondary-200: var(--color-sec-200);
-  --color-secondary-300: var(--color-sec-300);
-  --color-secondary-400: var(--color-sec-400);
-  --color-secondary-500: var(--color-sec-500);
-  --color-secondary-600: var(--color-sec-600);
-  --color-secondary-700: var(--color-sec-700);
-  --color-secondary-800: var(--color-sec-800);
-  --color-secondary-900: var(--color-sec-900);
-  --color-secondary-950: var(--color-sec-950);
+  /* Arrondi premium : les radius-sm/md/lg/xl/2xl/3xl de Nuxt UI dérivent tous de cette seule variable. */
+  --ui-radius: 0.5rem;
 }
 
 .dark {
   --ui-bg: var(--color-charcoal-950);
   --ui-bg-elevated: var(--color-charcoal-900);
   --ui-border: color-mix(in srgb, var(--color-brand-500) 20%, transparent);
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--ui-header-height) + 1rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

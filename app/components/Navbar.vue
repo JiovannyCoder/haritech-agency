@@ -5,27 +5,33 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Accueil",
     to: "/",
-    exactHash: true,
+    exactHash: true
   },
   {
-    label: "Services",
-    to: "/#nos-services",
-    exactHash: true,
+    label: "Formations",
+    children: formations.map((formation) => ({
+      label: formation.title,
+      // Le panneau horizontal n'affiche pas le badge des enfants : le statut
+      // est donc intégré à la description.
+      description: `${formationStatusLabel[formation.status]} · ${formation.description}`,
+      badge: formationStatusLabel[formation.status],
+      to: "/#formations"
+    }))
   },
   {
-    label: "Pourquoi nous",
-    to: "/#pourquoi-nous",
-    exactHash: true,
+    label: "Entreprises",
+    to: "/#entreprises",
+    exactHash: true
   },
   {
-    label: "Tarifs",
-    to: "/#tarifs",
-    exactHash: true,
+    label: "Qui sommes-nous",
+    to: "/#qui-sommes-nous",
+    exactHash: true
   },
   {
     label: "Contact",
     to: "/#contact",
-    exactHash: true,
+    exactHash: true
   }
 ])
 </script>
@@ -38,17 +44,25 @@ const items = computed<NavigationMenuItem[]>(() => [
       </div>
     </template>
 
-    <UNavigationMenu :items="items" variant="link" />
+    <UNavigationMenu
+      :items="items"
+      variant="link"
+      content-orientation="vertical"
+      :ui="{ content: 'w-96' }"
+    />
 
     <template #right>
       <!-- <UColorModeButton /> -->
       <UButton class="hidden md:flex" to="/#contact">
-        Devis gratuit
+        Nous contacter
       </UButton>
     </template>
 
     <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UButton to="/#contact" block class="mt-4">
+        Nous contacter
+      </UButton>
     </template>
   </UHeader>
 </template>

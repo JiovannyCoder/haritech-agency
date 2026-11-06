@@ -2,11 +2,12 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: "brand",
+      secondary: "sec",
       neutral: "slate",
     },
     button: {
       slots: {
-        base: "rounded-none transition-all sm:duration-400 cursor-pointer ",
+        base: "transition-all sm:duration-400 cursor-pointer",
       },
       variants: {
         size: {
@@ -22,7 +23,7 @@ export default defineAppConfig({
         {
           color: "primary",
           variant: "solid",
-          class: "border-1 border-primary dark:border-white hover:bg-secondary",
+          class: "border-1 border-primary dark:border-white hover:bg-black hover:border-black",
         },
         {
           color: "secondary",
@@ -43,15 +44,7 @@ export default defineAppConfig({
         },
       ],
     },
-    card: {
-      slots: {
-        root: "rounded-none",
-      },
-    },
     badge: {
-      slots: {
-        base: "rounded-none",
-      },
       defaultVariants: {
         variant: "outline",
         color: "neutral",
@@ -60,18 +53,22 @@ export default defineAppConfig({
         {
           variant: "outline",
           size: "md",
-          class: "rounded-none px-4 py-2 dark:text-white",
+          class: "px-4 py-2 dark:text-white",
         },
         {
           variant: "solid",
           size: "md",
-          class: "rounded-none px-4 py-2 dark:text-white",
+          class: "px-4 py-2 dark:text-white",
         },
       ],
     },
+    card: {
+      slots: {
+        root: "rounded-2xl",
+      },
+    },
     input: {
       slots: {
-        base: "rounded-none",
         root: "w-full",
       },
       variants: {
@@ -87,7 +84,6 @@ export default defineAppConfig({
     },
     textarea: {
       slots: {
-        base: "rounded-none",
         root: "w-full",
       },
       variants: {
@@ -103,7 +99,7 @@ export default defineAppConfig({
     },
     select: {
       slots: {
-        base: "rounded-none w-full",
+        base: "w-full",
       },
       variants: {
         size: {
@@ -120,7 +116,7 @@ export default defineAppConfig({
       variants: {
         size: {
           "3xl": {
-            root: "rounded-none bg-primary",
+            root: "bg-primary",
             icon: "text-white",
           },
         },
@@ -129,7 +125,7 @@ export default defineAppConfig({
     pageSection: {
       slots: {
         headline:
-          "bg-primary px-4 py-1 w-max md:mx-auto uppercase font-normal! text-white! text-sm tracking-wider",
+          "bg-primary px-4 py-1 w-max md:mx-auto uppercase font-normal! text-white! text-sm tracking-wider rounded-full",
         title: "md:text-center! text-left! font-semibold",
         description: "md:text-center! text-left!",
       },
