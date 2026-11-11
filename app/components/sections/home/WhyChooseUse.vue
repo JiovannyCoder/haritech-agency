@@ -116,7 +116,8 @@ onUnmounted(() => {
             <div class="max-w-2xl mb-12 text-left">
                 <div class="flex items-center gap-3 mb-4">
                     <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
-                    <span ref="headline-text-ref" class="text-xs font-bold tracking-[0.15em] uppercase text-primary">
+                    <span ref="headline-text-ref"
+                        class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
                         POURQUOI HARITECH
                     </span>
                 </div>
@@ -131,35 +132,37 @@ onUnmounted(() => {
                 </p>
             </div>
 
+            <!-- Fond légèrement élevé en dark mode pour détacher le bloc du fond noir -->
             <div ref="cards-grid-ref"
-                class="grid grid-cols-1 lg:grid-cols-3 rounded-2xl border border-default bg-default overflow-hidden divide-y lg:divide-y-0 lg:divide-x divide-default"
+                class="grid grid-cols-1 lg:grid-cols-3 rounded-2xl border border-default dark:border-white/10 bg-default dark:bg-elevated/50 overflow-hidden divide-y lg:divide-y-0 lg:divide-x divide-default dark:divide-white/10"
                 @mouseleave="activeIndex = 1">
                 <div v-for="(pillar, index) in pillars" :key="pillar.number"
                     class="relative overflow-hidden p-8 sm:p-10 flex flex-col justify-between min-h-[280px] cursor-default"
                     @mouseenter="activeIndex = index">
+                    <!-- Cercle agrandi (950px) pour remplir 100% de la carte, y compris le coin haut-droit -->
                     <span
-                        class="pointer-events-none absolute -bottom-24 -left-24 size-[680px] rounded-full bg-primary origin-bottom-left transition-transform duration-[3000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        class="pointer-events-none absolute -bottom-32 -left-32 size-[950px] rounded-full bg-primary origin-bottom-left transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
                         :class="activeIndex === index ? 'scale-100' : 'scale-0'" aria-hidden="true" />
 
                     <div class="relative z-10 flex items-center justify-between gap-4 mb-12">
-                        <div class="size-10 rounded-lg flex items-center justify-center transition-colors duration-1000 ease-out shrink-0"
-                            :class="activeIndex === index ? 'bg-white/15 text-white' : 'bg-elevated text-highlighted'">
+                        <div class="size-10 rounded-lg flex items-center justify-center transition-colors duration-500 ease-out shrink-0"
+                            :class="activeIndex === index ? 'bg-white/15 text-white' : 'bg-elevated dark:bg-white/[0.06] text-highlighted'">
                             <UIcon :name="pillar.icon" class="size-5" />
                         </div>
 
-                        <span class="text-xs font-bold tracking-wider transition-colors duration-1000 ease-out"
-                            :class="activeIndex === index ? 'text-white/70' : 'text-muted/60'">
+                        <span class="text-xs font-bold tracking-wider transition-colors duration-500 ease-out"
+                            :class="activeIndex === index ? 'text-white/75' : 'text-muted/60'">
                             {{ pillar.number }}
                         </span>
                     </div>
 
                     <div class="relative z-10">
-                        <h3 class="text-lg font-bold transition-colors duration-1000 ease-out"
+                        <h3 class="text-lg font-bold transition-colors duration-500 ease-out"
                             :class="activeIndex === index ? 'text-white' : 'text-highlighted'">
                             {{ pillar.title }}
                         </h3>
 
-                        <p class="mt-3 text-sm leading-relaxed transition-colors duration-1000 ease-out"
+                        <p class="mt-3 text-sm leading-relaxed transition-colors duration-500 ease-out"
                             :class="activeIndex === index ? 'text-white/85' : 'text-muted'">
                             {{ pillar.description }}
                         </p>

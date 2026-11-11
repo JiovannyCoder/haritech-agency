@@ -141,22 +141,14 @@ onUnmounted(() => {
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
         <div class="max-w-2xl text-left">
           <div class="flex items-center gap-3 mb-4">
-            <span
-              ref="headline-line-ref"
-              class="w-5 h-[1.5px] bg-primary inline-block shrink-0"
-            />
-            <span
-              ref="headline-text-ref"
-              class="text-xs font-bold tracking-[0.15em] uppercase text-primary"
-            >
+            <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+            <span ref="headline-text-ref"
+              class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
               SOLUTIONS ENTREPRISES
             </span>
           </div>
 
-          <h2
-            ref="title-ref"
-            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-highlighted leading-[1.1]"
-          >
+          <h2 ref="title-ref" class="text-4xl sm:text-5xl font-extrabold tracking-tight text-highlighted leading-[1.1]">
             Nos Solutions pour les<br>Entreprises
           </h2>
 
@@ -165,26 +157,16 @@ onUnmounted(() => {
           </p>
         </div>
 
-        <p
-          ref="side-note-ref"
-          class="text-xs sm:text-sm text-muted lg:text-right max-w-xs leading-relaxed"
-        >
+        <p ref="side-note-ref" class="text-xs sm:text-sm text-muted lg:text-right max-w-xs leading-relaxed">
           Une expertise locale, des standards internationaux et un interlocuteur unique.
         </p>
       </div>
 
       <!-- Grille des 2 cartes avec bascule active au survol -->
-      <div
-        ref="cards-grid-ref"
-        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch pr-4 sm:pr-5 pb-9"
-        @mouseleave="activeIndex = 0"
-      >
-        <div
-          v-for="(solution, index) in solutions"
-          :key="solution.number"
-          class="group relative h-full"
-          @mouseenter="activeIndex = index"
-        >
+      <div ref="cards-grid-ref" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch pr-4 sm:pr-5 pb-9"
+        @mouseleave="activeIndex = 0">
+        <div v-for="(solution, index) in solutions" :key="solution.number" class="group relative h-full"
+          @mouseenter="activeIndex = index">
           <!-- Plaque rouge : descendue uniquement sur la carte actuellement active -->
           <div
             class="absolute inset-0 bg-primary rounded-2xl pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
@@ -192,30 +174,21 @@ onUnmounted(() => {
               activeIndex === index
                 ? 'opacity-100 translate-x-4 translate-y-7'
                 : 'opacity-0 translate-x-0 translate-y-0'
-            ]"
-            aria-hidden="true"
-          />
+            ]" aria-hidden="true" />
 
           <!-- Carte principale fixe -->
-          <UCard
-            variant="solid"
-            :ui="{
-              root: 'relative z-10 h-full bg-default text-default ring-0 shadow-none rounded-2xl overflow-hidden flex flex-col',
-              header: 'p-6 sm:p-8 pb-0 border-none',
-              body: 'p-6 sm:p-8 pt-6 flex-1 flex flex-col justify-between'
-            }"
-          >
+          <UCard variant="solid" :ui="{
+            root: 'relative z-10 h-full bg-default text-default ring-1 ring-black/[0.06] dark:ring-white/10 shadow-none rounded-2xl overflow-hidden flex flex-col',
+            header: 'p-6 sm:p-8 pb-0 border-none',
+            body: 'p-6 sm:p-8 pt-6 flex-1 flex flex-col justify-between'
+          }">
             <template #header>
               <div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-elevated">
-                <NuxtImg
-                  :src="solution.image"
-                  :alt="solution.imageAlt"
-                  class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+                <NuxtImg :src="solution.image" :alt="solution.imageAlt"
+                  class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
 
                 <span
-                  class="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-md bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xs text-xs font-bold text-highlighted"
-                >
+                  class="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-md bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xs text-xs font-bold text-highlighted ring-1 ring-black/5 dark:ring-white/10">
                   {{ solution.number }}
                 </span>
               </div>
@@ -231,26 +204,17 @@ onUnmounted(() => {
               </p>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-default/60">
+            <div class="mt-8 pt-6 border-t border-default">
               <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-7">
-                <li
-                  v-for="item in solution.highlights"
-                  :key="item"
-                  class="flex items-start gap-2 text-xs font-medium text-muted"
-                >
-                  <UIcon name="i-lucide-check" class="size-3.5 text-primary mt-0.5 shrink-0" />
+                <li v-for="item in solution.highlights" :key="item"
+                  class="flex items-start gap-2 text-xs font-medium text-muted">
+                  <UIcon name="i-lucide-check" class="size-3.5 text-primary dark:text-brand-400 mt-0.5 shrink-0" />
                   <span>{{ item }}</span>
                 </li>
               </ul>
 
-              <UButton
-                :to="solution.ctaTo"
-                color="primary"
-                variant="outline"
-                size="lg"
-                trailing-icon="i-lucide-arrow-right"
-                class="font-semibold rounded-xl"
-              >
+              <UButton :to="solution.ctaTo" color="primary" variant="outline" size="lg"
+                trailing-icon="i-lucide-arrow-right" class="font-semibold rounded-xl">
                 {{ solution.ctaLabel }}
               </UButton>
             </div>

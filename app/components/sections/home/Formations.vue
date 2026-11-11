@@ -148,22 +148,13 @@ onUnmounted(() => {
     <UContainer>
       <div class="max-w-2xl mb-12 text-left">
         <div class="flex items-center gap-3 mb-4">
-          <span
-            ref="headline-line-ref"
-            class="w-5 h-[1.5px] bg-primary inline-block shrink-0"
-          />
-          <span
-            ref="headline-text-ref"
-            class="text-xs font-bold tracking-[0.15em] uppercase text-primary"
-          >
+          <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+          <span ref="headline-text-ref" class="text-xs font-bold tracking-[0.15em] uppercase text-primary">
             MÉTIERS DE DEMAIN
           </span>
         </div>
 
-        <h2
-          ref="title-ref"
-          class="text-4xl sm:text-5xl font-extrabold tracking-tight text-highlighted leading-[1.1]"
-        >
+        <h2 ref="title-ref" class="text-4xl sm:text-5xl font-extrabold tracking-tight text-highlighted leading-[1.1]">
           Nos Programmes de<br>Formation
         </h2>
 
@@ -175,23 +166,16 @@ onUnmounted(() => {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
         <!-- Carte Gauche -->
         <div ref="left-card-ref" class="h-full">
-          <UCard
-            variant="solid"
-            :ui="{
-              root: 'bg-primary text-white ring-0 rounded-2xl relative overflow-hidden h-full',
-              body: 'p-8 sm:p-10 h-full flex flex-col justify-between'
-            }"
-          >
-            <div
-              ref="ring-ref"
-              class="absolute -top-28 -right-28 size-80 rounded-full border-[48px] border-white/[0.07] pointer-events-none"
-            />
+          <UCard variant="solid" :ui="{
+            root: 'bg-primary text-white ring-0 rounded-2xl relative overflow-hidden h-full',
+            body: 'p-8 sm:p-10 h-full flex flex-col justify-between'
+          }">
+            <div ref="ring-ref"
+              class="absolute -top-28 -right-28 size-80 rounded-full border-[48px] border-white/[0.07] pointer-events-none" />
 
             <div class="flex items-center justify-between gap-4 relative z-10">
-              <UBadge
-                variant="soft"
-                class="bg-white/15 text-white font-semibold tracking-wider uppercase text-[11px] px-3 py-1 rounded-full"
-              >
+              <UBadge variant="soft"
+                class="bg-white/15 text-white font-semibold tracking-wider uppercase text-[11px] px-3 py-1 rounded-full">
                 Parcours actif
               </UBadge>
 
@@ -207,44 +191,35 @@ onUnmounted(() => {
               </h3>
 
               <div ref="tags-container-ref" class="flex flex-wrap gap-2">
-                <span
-                  v-for="tag in tags"
-                  :key="tag"
-                  class="px-3.5 py-1.5 text-xs font-medium text-white bg-white/10 border border-white/15 rounded-lg"
-                >
+                <span v-for="tag in tags" :key="tag"
+                  class="px-3.5 py-1.5 text-xs font-medium text-white bg-white/10 border border-white/15 rounded-lg">
                   {{ tag }}
                 </span>
               </div>
             </div>
 
             <div class="relative z-10">
-              <UButton
-                to="/formations/developpement-web"
-                color="neutral"
-                variant="solid"
-                size="lg"
-                trailing-icon="i-lucide-arrow-right"
-                class="bg-white text-primary hover:bg-gray-100 font-semibold rounded-xl px-5 py-3"
-              >
+              <!-- Bouton corrigé : :ui force text-primary sur le label et l'icône en dark mode -->
+              <UButton to="/formations/developpement-web" variant="ghost" size="lg" trailing-icon="i-lucide-arrow-right"
+                :ui="{
+                  base: 'bg-white hover:bg-gray-100 active:bg-gray-200 text-primary font-semibold rounded-xl px-5 py-3 shadow-sm',
+                  label: 'text-primary',
+                  trailingIcon: 'text-primary'
+                }">
                 Découvrir les modules
               </UButton>
             </div>
           </UCard>
         </div>
 
-        <!-- Carte Droite avec cadre extérieur vitré -->
-        <div
-          ref="right-card-ref"
-          class="h-full rounded-xl p-2 sm:p-3 bg-white/20 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/15 ring-1 ring-black/[0.08] dark:ring-black/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]"
-        >
-          <UCard
-            variant="solid"
-            :ui="{
-              root: 'bg-default text-default ring-1 ring-black/[0.07] dark:ring-white/10 rounded-lg h-full shadow-[0_4px_16px_-6px_rgba(0,0,0,0.08)]',
-              header: 'p-6 sm:px-8 sm:pt-8 sm:pb-6',
-              body: 'px-6 sm:px-8 pb-6 sm:pb-8 pt-0'
-            }"
-          >
+        <!-- Carte Droite avec cadre extérieur vitré (reflet blanc adouci en dark mode) -->
+        <div ref="right-card-ref"
+          class="h-full rounded-xl p-2 sm:p-3 bg-white/20 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/10 ring-1 ring-black/[0.08] dark:ring-white/5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.08)]">
+          <UCard variant="solid" :ui="{
+            root: 'bg-default text-default ring-1 ring-black/[0.07] dark:ring-white/10 rounded-lg h-full shadow-[0_4px_16px_-6px_rgba(0,0,0,0.08)] dark:shadow-none',
+            header: 'p-6 sm:px-8 sm:pt-8 sm:pb-6',
+            body: 'px-6 sm:px-8 pb-6 sm:pb-8 pt-0'
+          }">
             <template #header>
               <div class="flex items-center gap-3.5">
                 <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
@@ -262,19 +237,16 @@ onUnmounted(() => {
             </template>
 
             <div ref="upcoming-list-ref" class="divide-y divide-default">
-              <div
-                v-for="program in upcomingPrograms"
-                :key="program.number"
-                class="py-5 first:pt-6 last:pb-0 flex items-start gap-4"
-              >
-                <span class="text-xs font-bold text-primary mt-1 shrink-0">
+              <div v-for="program in upcomingPrograms" :key="program.number"
+                class="py-5 first:pt-0 last:pb-0 flex items-start gap-4">
+                <span class="text-xs font-bold text-primary mt-0.5 shrink-0">
                   {{ program.number }}
                 </span>
                 <div>
-                  <h4 class="text-sm sm:text-base font-bold text-highlighted">
+                  <h4 class="text-sm font-semibold text-highlighted">
                     {{ program.title }}
                   </h4>
-                  <p class="text-xs sm:text-sm text-muted mt-1">
+                  <p class="text-xs text-muted mt-1 leading-relaxed">
                     {{ program.description }}
                   </p>
                 </div>

@@ -14,13 +14,13 @@ export default defineAppConfig({
       variants: {
         size: {
           md: {
-            base: "px-3.5 py-2 text-sm font-normal dark:text-white",
+            base: "px-3.5 py-2 text-sm font-normal",
           },
           lg: {
-            base: "px-4 py-2 text-sm font-semibold dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
+            base: "px-4 py-2 text-sm font-semibold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
           },
           xl: {
-            base: "px-5 py-3 text-base font-medium dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
+            base: "px-5 py-3 text-base font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
           },
         },
       },
@@ -29,13 +29,20 @@ export default defineAppConfig({
           color: "primary",
           variant: "solid",
           class:
-            "border border-primary dark:border-white/15 hover:bg-neutral-900 hover:border-neutral-900",
+            "text-white dark:text-white border border-primary dark:border-white/15 hover:bg-neutral-900 hover:border-neutral-900 dark:hover:bg-brand-600 dark:hover:border-white/25",
         },
         {
           color: "secondary",
           variant: "outline",
           class: "hover:bg-secondary hover:text-white",
         },
+        {
+          color: "primary",
+          variant: "outline",
+          class:
+            "hover:bg-primary hover:text-white dark:bg-primary/10 dark:text-white dark:ring-primary/50 dark:hover:bg-primary dark:hover:ring-primary",
+        },
+
         {
           color: "primary",
           variant: "outline",
@@ -69,7 +76,7 @@ export default defineAppConfig({
         {
           variant: "solid",
           size: "md",
-          class: "px-4 py-2 dark:text-white",
+          class: "px-4 py-2 text-white dark:text-white",
         },
       ],
     },

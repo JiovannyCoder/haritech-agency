@@ -134,11 +134,10 @@ onUnmounted(() => {
 
 <template>
   <div ref="footer-wrapper-ref" class="relative overflow-hidden">
-     <div
-      ref="grid-ref"
-      class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,color-mix(in_srgb,var(--ui-border)_25%,white)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--ui-border)_25%,white)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_top,black,transparent_85%)]"
-      aria-hidden="true"
-    />
+    <!-- Grille corrigée : transparent au lieu de white pour s'adapter au mode sombre -->
+    <div ref="grid-ref"
+      class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,color-mix(in_srgb,var(--ui-border)_45%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--ui-border)_45%,transparent)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_top,black,transparent_85%)]"
+      aria-hidden="true" />
 
     <UFooter class="bg-transparent border-t border-default/60" :ui="{
       top: 'py-20 sm:py-28',
@@ -164,9 +163,9 @@ onUnmounted(() => {
             <template #link="{ link }">
               <ULink v-if="link.to || link.href" :to="link.to" :href="link.href" :target="link.target"
                 :exact-hash="link.exactHash"
-                class="footer-link group inline-flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors duration-300">
+                class="footer-link group inline-flex items-center gap-2 text-sm text-muted hover:text-primary dark:hover:text-brand-400 transition-colors duration-300">
                 <UIcon v-if="link.icon" :name="link.icon"
-                  class="size-4 text-muted group-hover:text-primary transition-colors duration-300 shrink-0" />
+                  class="size-4 text-muted group-hover:text-primary dark:group-hover:text-brand-400 transition-colors duration-300 shrink-0" />
                 <span class="footer-link-text">{{ link.label }}</span>
               </ULink>
 

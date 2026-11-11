@@ -60,23 +60,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <UPageHero
-    id="hero"
-    orientation="horizontal"
-    headline="Formation & services numériques — Antananarivo"
+  <UPageHero id="hero" orientation="horizontal" headline="Formation & services numériques — Antananarivo"
     title="Devenez un professionnel performant, avec ou sans l'IA."
     description="Haritech Agency forme les talents de Madagascar aux métiers du numérique et accompagne les entreprises dans leurs projets."
     :ui="{
       title: 'sm:text-6xl text-4xl font-semibold leading-12 sm:leading-18',
       description: 'sm:text-lg text-md'
-    }"
-  >
+    }">
     <template #top>
-      <div
-        ref="grid-ref"
-        class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,color-mix(in_srgb,var(--ui-border)_35%,white)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--ui-border)_35%,white)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_bottom,black,transparent_75%)]"
-        aria-hidden="true"
-      />
+      <div ref="grid-ref"
+        class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,color-mix(in_srgb,var(--ui-border)_50%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--ui-border)_50%,transparent)_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_bottom,black,transparent_75%)]"
+        aria-hidden="true" />
     </template>
 
     <template #headline>
@@ -93,7 +87,8 @@ onMounted(() => {
 
     <template #description>
       <span ref="description-ref">
-        Haritech Agency forme les talents de Madagascar aux métiers du numérique et accompagne les entreprises dans leurs projets.
+        Haritech Agency forme les talents de Madagascar aux métiers du numérique et accompagne les entreprises dans
+        leurs projets.
       </span>
     </template>
 
@@ -112,13 +107,12 @@ onMounted(() => {
     </template>
 
     <div class="relative mb-8 sm:mb-10 w-full max-w-md mx-auto lg:max-w-none">
-      <div ref="red-block-ref" class="absolute h-3/4 -bottom-1/10 w-2/3 right-0 bg-primary rounded-2xl" aria-hidden="true" />
-      <div ref="image-card-ref" class="relative aspect-4/5 w-95/100 border-10 border-white rounded-2xl overflow-hidden bg-default">
-        <NuxtImg
-          class="absolute top-0 left-0 w-full h-full object-cover object-center"
-          src="/images/home/bg-hero.jpg"
-          alt="Session de formation Haritech Agency à Antananarivo"
-        />
+      <div ref="red-block-ref" class="absolute h-3/4 -bottom-1/10 w-2/3 right-0 bg-primary rounded-2xl"
+        aria-hidden="true" />
+      <div ref="image-card-ref"
+        class="relative aspect-4/5 w-95/100 border-10 border-default rounded-2xl overflow-hidden bg-default">
+        <NuxtImg class="absolute top-0 left-0 w-full h-full object-cover object-center" src="/images/home/bg-hero.jpg"
+          alt="Session de formation Haritech Agency à Antananarivo" />
         <div ref="badge-ref" class="absolute top-4 left-4 sm:top-6 sm:left-6">
           <UBadge color="primary" variant="solid" class="rounded-full uppercase text-xs tracking-wider">
             100% présentiel
@@ -127,11 +121,10 @@ onMounted(() => {
       </div>
 
       <!-- Carte flottante avec double cadre verre dépoli -->
-      <div
-        ref="floating-card-ref"
-        class="absolute md:w-75/100 w-85/100 left-6 md:left-20 -bottom-5 md:-bottom-10 rounded-xl p-1.5 sm:p-2 bg-white/30 dark:bg-white/[0.05] backdrop-blur-md border border-white/90 dark:border-white/15 ring-1 ring-black/[0.08] dark:ring-black/40 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.12),inset_0_1px_1px_rgba(255,255,255,0.95)] will-change-transform transform-gpu"
-      >
-        <div class="rounded-lg bg-default/95 backdrop-blur-sm ring-1 ring-black/[0.06] dark:ring-white/10 p-3.5 sm:p-4 flex items-center justify-between gap-2 md:gap-4 flex-wrap">
+      <div ref="floating-card-ref"
+        class="absolute md:w-75/100 w-85/100 left-6 md:left-20 -bottom-5 md:-bottom-10 rounded-xl p-1.5 sm:p-2 bg-white/30 dark:bg-white/[0.04] backdrop-blur-md border border-white/90 dark:border-white/10 ring-1 ring-black/[0.08] dark:ring-white/5 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.12),inset_0_1px_1px_rgba(255,255,255,0.95)] dark:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.12)] will-change-transform transform-gpu">
+        <div
+          class="rounded-lg bg-default/95 backdrop-blur-sm ring-1 ring-black/[0.06] dark:ring-white/10 p-3.5 sm:p-4 flex items-center justify-between gap-2 md:gap-4 flex-wrap">
           <p class="font-semibold text-sm md:text-md">Apprendre par la pratique</p>
           <p class="text-muted text-xs md:text-sm">Antananarivo, Madagascar</p>
         </div>
