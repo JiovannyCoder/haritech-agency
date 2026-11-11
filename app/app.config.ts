@@ -7,15 +7,20 @@ export default defineAppConfig({
     },
     button: {
       slots: {
-        base: "transition-all sm:duration-400 cursor-pointer",
+        base: "group rounded-sm transition-colors duration-300 ease-out cursor-pointer",
+        trailingIcon:
+          "transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1",
       },
       variants: {
         size: {
           md: {
-            base: "px-5 py-2.5 text-md font-normal dark:text-white",
+            base: "px-3.5 py-2 text-sm font-normal dark:text-white",
+          },
+          lg: {
+            base: "px-4 py-2 text-sm font-semibold dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
           },
           xl: {
-            base: "px-6 py-4 text-md font-normal dark:text-white",
+            base: "px-5 py-3 text-base font-medium dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14)]",
           },
         },
       },
@@ -23,7 +28,8 @@ export default defineAppConfig({
         {
           color: "primary",
           variant: "solid",
-          class: "border-1 border-primary dark:border-white hover:bg-black hover:border-black",
+          class:
+            "border border-primary dark:border-white/15 hover:bg-neutral-900 hover:border-neutral-900",
         },
         {
           color: "secondary",
@@ -31,16 +37,21 @@ export default defineAppConfig({
           class: "hover:bg-secondary hover:text-white",
         },
         {
+          color: "primary",
+          variant: "outline",
+          class: "hover:bg-primary hover:text-white",
+        },
+        {
           color: "secondary",
           variant: "outline",
           size: "xl",
-          class: "sm:border-1",
+          class: "sm:border",
         },
         {
           color: "primary",
           variant: "outline",
           size: "xl",
-          class: "sm:border-1",
+          class: "sm:border",
         },
       ],
     },
@@ -74,7 +85,7 @@ export default defineAppConfig({
       variants: {
         size: {
           lg: {
-            base: "p-3.5 text-md font-normal mt-2",
+            base: "rounded-sm p-3.5 text-md font-normal mt-2",
           },
         },
       },
@@ -89,7 +100,7 @@ export default defineAppConfig({
       variants: {
         size: {
           lg: {
-            base: "p-3.5 text-md font-normal mt-2",
+            base: "rounded-sm p-3.5 text-md font-normal mt-2",
           },
         },
       },
@@ -99,7 +110,7 @@ export default defineAppConfig({
     },
     select: {
       slots: {
-        base: "w-full",
+        base: "w-full rounded-sm",
       },
       variants: {
         size: {

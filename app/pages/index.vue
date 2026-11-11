@@ -32,9 +32,9 @@ useSeoMeta({
   <UPage class="scroll-smooth">
     <SectionsHomeHero />
     <SectionsHomeFormations />
-    <!-- <SectionsHomeServices /> -->
-    <!-- <SectionsHomeWhyChooseUse /> -->
+    <SectionsHomeServices />
+    <SectionsHomeWhyChooseUse />
     <!-- <SectionsHomePricing /> -->
-    <!-- <SectionsHomeContact /> -->
+    <SectionsHomeContact />
   </UPage>
 </template>

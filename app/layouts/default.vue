@@ -5,5 +5,6 @@
       <slot />
     </UMain>
     <Footer />
+    <ScrollToTop />
   </UApp>
 </template>

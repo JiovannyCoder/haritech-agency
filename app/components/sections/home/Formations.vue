@@ -56,7 +56,6 @@ onMounted(() => {
       }
     })
 
-    // 1. En-tête : le trait s'étire, le headline apparaît, puis le titre se dévoile
     if (headlineLineRef.value) {
       tl.from(headlineLineRef.value, {
         scaleX: 0,
@@ -90,7 +89,6 @@ onMounted(() => {
       }, "-=0.45")
     }
 
-    // 2. Carte gauche (Parcours actif) + anneau + tags en cascade
     if (leftCardRef.value) {
       tl.from(leftCardRef.value, {
         y: 28,
@@ -119,7 +117,6 @@ onMounted(() => {
       }, "-=0.45")
     }
 
-    // 3. Carte droite (Prochainement) + lignes des programmes en cascade
     if (rightCardRef.value) {
       tl.from(rightCardRef.value, {
         y: 28,
@@ -149,7 +146,6 @@ onUnmounted(() => {
 <template>
   <section ref="section-ref" id="formations" class="py-16 sm:py-24 bg-elevated/50">
     <UContainer>
-      <!-- En-tête -->
       <div class="max-w-2xl mb-12 text-left">
         <div class="flex items-center gap-3 mb-4">
           <span
@@ -176,7 +172,6 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- Grille des deux cartes -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
         <!-- Carte Gauche -->
         <div ref="left-card-ref" class="h-full">
@@ -237,14 +232,17 @@ onUnmounted(() => {
           </UCard>
         </div>
 
-        <!-- Carte Droite -->
-        <div ref="right-card-ref" class="h-full">
+        <!-- Carte Droite avec cadre extérieur vitré -->
+        <div
+          ref="right-card-ref"
+          class="h-full rounded-xl p-2 sm:p-3 bg-white/20 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/15 ring-1 ring-black/[0.08] dark:ring-black/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]"
+        >
           <UCard
             variant="solid"
             :ui="{
-              root: 'bg-default text-default ring-0 rounded-2xl h-full',
-              header: 'p-6 sm:px-10 sm:pt-9 sm:pb-6',
-              body: 'px-6 sm:px-10 pb-8 sm:pb-10 pt-0'
+              root: 'bg-default text-default ring-1 ring-black/[0.07] dark:ring-white/10 rounded-lg h-full shadow-[0_4px_16px_-6px_rgba(0,0,0,0.08)]',
+              header: 'p-6 sm:px-8 sm:pt-8 sm:pb-6',
+              body: 'px-6 sm:px-8 pb-6 sm:pb-8 pt-0'
             }"
           >
             <template #header>
