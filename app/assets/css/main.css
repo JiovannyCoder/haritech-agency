@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Montserrat Alternates";
-  src: url("/assets/fonts/Geist-VariableFont_wght.ttf") format("truetype"); /* Corrigé : format 'truetype' au lieu de 'ttf' */
+  src: url("/assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,10 @@
 }
 
 :root {
-  /* Arrondi premium : les radius-sm/md/lg/xl/2xl/3xl de Nuxt UI dérivent tous de cette seule variable. */
   --ui-radius: 0.5rem;
+  --ui-bg: #ffffff;
+  --ui-bg-elevated: #f5f5f6; /* Gris neutre pur assorti au fond du logo */
+  --ui-border: #e5e5e7;
 }
 
 .dark {

@@ -3,7 +3,7 @@ export default defineAppConfig({
     colors: {
       primary: "brand",
       secondary: "sec",
-      neutral: "slate",
+      neutral: "neutral",
     },
     button: {
       slots: {

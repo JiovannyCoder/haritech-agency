@@ -9,23 +9,12 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
   {
     label: "Formations",
-    children: formations.map((formation) => ({
-      label: formation.title,
-      // Le panneau horizontal n'affiche pas le badge des enfants : le statut
-      // est donc intégré à la description.
-      description: `${formationStatusLabel[formation.status]} · ${formation.description}`,
-      badge: formationStatusLabel[formation.status],
-      to: "/#formations"
-    }))
+    to: "/#formations",
+    exactHash: true
   },
   {
     label: "Entreprises",
     to: "/#entreprises",
-    exactHash: true
-  },
-  {
-    label: "Qui sommes-nous",
-    to: "/#qui-sommes-nous",
     exactHash: true
   },
   {
@@ -44,15 +33,10 @@ const items = computed<NavigationMenuItem[]>(() => [
       </div>
     </template>
 
-    <UNavigationMenu
-      :items="items"
-      variant="link"
-      content-orientation="vertical"
-      :ui="{ content: 'w-96' }"
-    />
+    <UNavigationMenu :items="items" variant="link" content-orientation="vertical" :ui="{ content: 'w-96' }" />
 
     <template #right>
-      <!-- <UColorModeButton /> -->
+      <UColorModeButton />
       <UButton class="hidden md:flex" to="/#contact">
         Nous contacter
       </UButton>
