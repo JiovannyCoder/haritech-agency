@@ -55,7 +55,7 @@ const columns: FooterColumn[] = [
       },
       {
         label: "Page Haritech Agency",
-        href: "https://facebook.com",
+        href: "https://facebook.com/haritechagency",
         icon: "i-lucide-facebook",
         target: "_blank"
       },

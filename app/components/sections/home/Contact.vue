@@ -17,7 +17,7 @@ const contacts: ContactInfo[] = [
     icon: "i-lucide-facebook",
     title: "Facebook",
     description: "Page Haritech Agency",
-    link: "https://facebook.com"
+    link: "https://facebook.com/haritechagency"
   },
   {
     icon: "i-lucide-map-pin",
