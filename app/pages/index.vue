@@ -102,7 +102,6 @@ useHead({
     <SectionsHomeFormations />
     <SectionsHomeServices />
     <SectionsHomeWhyChooseUse />
-    <!-- <SectionsHomePricing /> -->
     <SectionsHomeContact />
   </UPage>
 </template>

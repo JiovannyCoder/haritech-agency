@@ -1,6 +1,21 @@
 <script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui"
 
+const isScrolled = ref(false)
+
+function handleScroll() {
+  isScrolled.value = window.scrollY > 10
+}
+
+onMounted(() => {
+  handleScroll()
+  window.addEventListener("scroll", handleScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll)
+})
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Accueil",
@@ -9,7 +24,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
   {
     label: "Formations",
-    to: "/#formations",
+    to: "/formations",
     exactHash: true
   },
   {
@@ -26,7 +41,12 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UHeader mode="drawer">
+  <UHeader mode="drawer" :ui="{
+    root: [
+      'bg-default backdrop-blur-none border-b-0 transition-shadow duration-200',
+      isScrolled ? 'shadow-sm' : 'shadow-none'
+    ]
+  }">
     <template #title>
       <div>
         <AppLogo />
