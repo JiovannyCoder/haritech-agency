@@ -103,7 +103,7 @@ onUnmounted(() => {
 <template>
     <section ref="section-ref" class="relative overflow-hidden bg-default pt-16 pb-14 sm:pt-24 sm:pb-20">
         <div aria-hidden="true" data-hero-dots
-            class="pointer-events-none absolute inset-0 opacity-45 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black_25%,transparent_90%)]" />
+            class="pointer-events-none absolute inset-0 opacity-45 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black_25%,transparent_90%)]" />
 
         <UContainer class="relative z-10">
             <div class="max-w-3xl text-left">
@@ -132,9 +132,8 @@ onUnmounted(() => {
 
             <div data-hero-media
                 class="pointer-events-none hidden lg:flex lg:justify-end lg:items-end lg:absolute lg:-bottom-20 lg:right-8 xl:right-12 lg:w-1/3">
-                <img src="/images/formation/hero.png"
-                    alt="Participant regardant vers l'avenir chez Haritech Agency"
-                    class="block max-h-[340px] xl:max-h-[380px] w-auto object-contain object-bottom" />
+                <img src="/images/formation/hero.png" alt="Participant regardant vers l'avenir chez Haritech Agency"
+                    class="block max-h-[340px] xl:max-h-[380px] w-auto object-contain object-bottom dark:brightness-90 dark:contrast-105 transition-[filter] duration-300" />
             </div>
         </UContainer>
     </section>

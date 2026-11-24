@@ -140,14 +140,12 @@ onUnmounted(() => {
                 </button>
             </div>
 
-            <!-- ENVELOPPE EXTÉRIEURE : EFFET VERRE FIN -->
             <div data-sessions-table
-                class="rounded-xl p-1.5 bg-neutral-100/45 backdrop-blur-md border border-white/90 ring-1 ring-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
-                <!-- TABLEAU INTÉRIEUR BLANC -->
+                class="rounded-xl p-1.5 bg-neutral-100/45 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/10 ring-1 ring-black/[0.06] dark:ring-black/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] dark:shadow-none">
                 <div
-                    class="rounded-lg bg-default ring-1 ring-black/[0.06] shadow-[0_2px_12px_-4px_rgba(0,0,0,0.06)] overflow-hidden">
+                    class="rounded-lg bg-default ring-1 ring-black/[0.06] dark:ring-white/10 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden">
                     <div
-                        class="hidden lg:grid lg:grid-cols-12 gap-4 px-6 py-3.5 bg-neutral-50/90 border-b border-default text-[11px] font-bold tracking-[0.1em] uppercase text-muted">
+                        class="hidden lg:grid lg:grid-cols-12 gap-4 px-6 py-3.5 bg-neutral-50/90 dark:bg-neutral-900/80 border-b border-default text-[11px] font-bold tracking-[0.1em] uppercase text-muted">
                         <div class="col-span-5">
                             Bootcamp
                         </div>
@@ -164,7 +162,7 @@ onUnmounted(() => {
 
                     <div class="divide-y divide-(--ui-border)">
                         <div v-for="session in filteredSessions" :key="session.id" data-session-row
-                            class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start lg:items-center px-5 py-5 sm:px-6 transition-colors hover:bg-neutral-50/70">
+                            class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start lg:items-center px-5 py-5 sm:px-6 transition-colors hover:bg-neutral-50/70 dark:hover:bg-neutral-900/60">
                             <div class="lg:col-span-5">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary mb-1">
@@ -191,18 +189,17 @@ onUnmounted(() => {
 
                             <div class="lg:col-span-2">
                                 <div
-                                    class="inline-flex items-center gap-2 rounded-full border border-default bg-neutral-100/60 px-3 py-1 text-xs font-semibold text-highlighted">
+                                    class="inline-flex items-center gap-2 rounded-full border border-default bg-neutral-100/60 dark:bg-neutral-900 px-3 py-1 text-xs font-semibold text-highlighted">
                                     <span class="size-2 rounded-full shrink-0"
                                         :class="session.seatsLeft <= 4 ? 'bg-primary' : 'bg-emerald-600'" />
                                     <span>{{ session.seatsLeft }} / {{ session.totalSeats }} places</span>
                                 </div>
                             </div>
 
-                            <div
-                                class="lg:col-span-2 flex items-center justify-end w-full pt-2 lg:pt-0 border-t lg:border-t-0 border-default">
+                            <div class="lg:col-span-2 flex lg:justify-end w-full">
                                 <UButton :to="`/formations/${session.slug}`" color="primary" variant="solid" size="md"
                                     trailing-icon="i-lucide-arrow-right"
-                                    class="w-full sm:w-auto justify-center rounded-sm font-bold shrink-0">
+                                    class="w-full lg:w-auto justify-center rounded-sm font-semibold">
                                     Réserver
                                 </UButton>
                             </div>

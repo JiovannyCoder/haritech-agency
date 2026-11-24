@@ -120,12 +120,12 @@ onUnmounted(() => {
     ctx?.revert()
 })
 </script>
+
 <template>
-    <section ref="section-ref" class="relative overflow-hidden py-16 bg-neutral-50 sm:py-24">
-        <!-- Pattern de points subtil qui remonte du bas vers le haut -->
+    <section ref="section-ref" class="relative overflow-hidden py-16 bg-neutral-50 dark:bg-neutral-950 sm:py-24">
         <div
             aria-hidden="true"
-            class="pointer-events-none absolute inset-0 bg-[radial-gradient(#e4e4e7_1px,transparent_1px)] [background-size:20px_20px] [mask-image:linear-gradient(to_top,black_15%,transparent_85%)]"
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(#e4e4e7_1px,transparent_1px)] dark:bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:20px_20px] [mask-image:linear-gradient(to_top,black_15%,transparent_85%)]"
         />
 
         <UContainer class="relative z-10">
@@ -150,9 +150,8 @@ onUnmounted(() => {
                     class="group h-[390px] sm:h-[410px] [perspective:1200px] cursor-pointer" @click="toggleFlip(index)">
                     <div class="relative size-full transition-transform duration-600 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
                         :class="{ '[transform:rotateY(180deg)]': flippedIndex === index }">
-                        <!-- FACE AVANT : EFFET VERRE BLANC + MICRO-LISERÉ QUASI INVISIBLE -->
                         <div
-                            class="absolute inset-0 size-full rounded-xl bg-white/90 backdrop-blur-sm shadow-[0_2px_12px_-4px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col justify-between [backface-visibility:hidden]">
+                            class="absolute inset-0 size-full rounded-xl bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm border border-black/[0.04] dark:border-white/10 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.04)] dark:shadow-none p-6 sm:p-8 flex flex-col justify-between [backface-visibility:hidden]">
                             <div>
                                 <div class="flex items-center justify-between gap-3">
                                     <span
@@ -177,60 +176,55 @@ onUnmounted(() => {
 
                                 <div class="mt-4 flex flex-wrap gap-2">
                                     <span v-for="tag in item.frontTags" :key="tag"
-                                        class="rounded-full bg-neutral-100/90 px-3 py-1 text-xs font-medium text-muted">
+                                        class="rounded-full bg-neutral-100/90 dark:bg-neutral-800/80 px-3 py-1 text-xs font-medium text-muted">
                                         {{ tag }}
                                     </span>
                                 </div>
                             </div>
 
                             <div class="pt-4">
-                                <span
-                                    class="flex w-full items-center justify-center gap-2 rounded-full bg-neutral-100 px-5 py-3 text-xs sm:text-sm font-bold text-highlighted">
+                                <div
+                                    class="w-full rounded-full bg-neutral-100 dark:bg-neutral-800 py-2.5 px-4 text-xs font-bold text-highlighted flex items-center justify-center gap-2 transition-colors group-hover:bg-primary/10 group-hover:text-primary">
                                     <span>Voir la formation conseillée</span>
-                                    <UIcon name="i-lucide-refresh-cw" class="size-4 text-primary" />
-                                </span>
+                                    <UIcon name="i-lucide-refresh-cw" class="size-3.5 text-primary shrink-0" />
+                                </div>
                             </div>
                         </div>
 
-                        <!-- FACE ARRIÈRE : ROUGE FLAT -->
                         <div
-                            class="absolute inset-0 size-full rounded-xl bg-primary text-white p-6 sm:p-8 flex flex-col justify-between overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                            <!-- Arc décoratif subtil en arrière-plan -->
-                            <div aria-hidden="true"
-                                class="pointer-events-none absolute -top-16 -right-16 size-56 rounded-full border-[28px] border-white/[0.08]" />
-
-                            <div class="relative z-10">
+                            class="absolute inset-0 size-full rounded-xl bg-neutral-900 dark:bg-neutral-900 border border-neutral-800 dark:border-primary/40 p-6 sm:p-8 flex flex-col justify-between text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                            <div>
                                 <div class="flex items-center justify-between gap-3">
                                     <span
-                                        class="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-white">
+                                        class="inline-flex items-center rounded-full bg-primary/20 border border-primary/40 px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-primary">
                                         {{ item.badgeBack }}
                                     </span>
 
-                                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-white">
-                                        <span class="size-1.5 rounded-full bg-white shrink-0" />
+                                    <span class="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-300">
+                                        <span class="size-1.5 rounded-full bg-emerald-500 shrink-0" />
                                         {{ item.status }}
                                     </span>
                                 </div>
 
-                                <h3 class="mt-6 text-xl sm:text-2xl font-extrabold tracking-tight text-white leading-snug">
+                                <h3
+                                    class="mt-6 text-xl sm:text-2xl font-extrabold tracking-tight text-white leading-snug">
                                     {{ item.recommendation }}
                                 </h3>
 
-                                <div class="mt-4 flex flex-wrap gap-2">
+                                <div class="mt-5 flex flex-wrap gap-2">
                                     <span v-for="tag in item.tags" :key="tag"
-                                        class="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
+                                        class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-neutral-200">
                                         {{ tag }}
                                     </span>
                                 </div>
                             </div>
 
-                            <div class="relative z-10 pt-4">
-                                <NuxtLink :to="item.to" @click.stop
-                                    class="group/btn flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-xs sm:text-sm font-bold text-primary transition-colors hover:bg-neutral-100">
-                                    <span>{{ item.linkLabel }}</span>
-                                    <UIcon name="i-lucide-arrow-right"
-                                        class="size-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                                </NuxtLink>
+                            <div class="pt-4">
+                                <UButton :to="item.to" color="primary" variant="solid" size="md"
+                                    trailing-icon="i-lucide-arrow-right"
+                                    class="w-full justify-center rounded-sm font-semibold" @click.stop>
+                                    {{ item.linkLabel }}
+                                </UButton>
                             </div>
                         </div>
                     </div>
@@ -239,4 +233,3 @@ onUnmounted(() => {
         </UContainer>
     </section>
 </template>
-
