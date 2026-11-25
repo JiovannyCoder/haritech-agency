@@ -5,6 +5,9 @@ export default defineAppConfig({
       secondary: "sec",
       neutral: "neutral",
     },
+    container: {
+      base: "max-w-screen-2xl",
+    },
     button: {
       slots: {
         base: "group rounded-sm transition-colors duration-300 ease-out cursor-pointer",

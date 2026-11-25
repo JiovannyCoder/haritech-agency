@@ -86,12 +86,19 @@ onMounted(() => {
                 },
                 {
                     clipPath: 'inset(0% 0% 0% 0%)',
-                    opacity: 0.45,
-                    duration: 1.8,
+                    opacity: 0.55,
+                    duration: 1.6,
                     ease: 'power2.out'
                 },
                 '-=0.4'
             )
+
+        gsap.to('[data-hero-dots]', {
+            backgroundPosition: '22px 22px',
+            duration: 4.5,
+            ease: 'none',
+            repeat: -1
+        })
     }, sectionRef.value)
 })
 
@@ -103,7 +110,7 @@ onUnmounted(() => {
 <template>
     <section ref="section-ref" class="relative overflow-hidden bg-default pt-16 pb-14 sm:pt-24 sm:pb-20">
         <div aria-hidden="true" data-hero-dots
-            class="pointer-events-none absolute inset-0 opacity-45 bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-800)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black_25%,transparent_90%)]" />
+            class="pointer-events-none absolute inset-0 opacity-55 bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-700)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black_30%,transparent_90%)]" />
 
         <UContainer class="relative z-10">
             <div class="max-w-3xl text-left">

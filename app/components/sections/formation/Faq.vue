@@ -92,11 +92,11 @@ onUnmounted(() => {
     ctx?.revert()
 })
 </script>
+
 <template>
-    <section ref="section-ref" class="py-16 sm:py-24 bg-neutral-100">
+    <section ref="section-ref" class="py-16 sm:py-24 bg-elevated/50">
         <UContainer>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-                <!-- Colonne gauche : En-tête -->
                 <div class="lg:col-span-4 text-left">
                     <div class="flex items-center gap-2.5 mb-3">
                         <p data-faq-eyebrow class="text-xs font-bold tracking-[0.15em] uppercase text-primary">
@@ -115,7 +115,6 @@ onUnmounted(() => {
                     </p>
                 </div>
 
-                <!-- Colonne droite : Accordéon Nuxt UI 4 -->
                 <div data-faq-list class="lg:col-span-8">
                     <UAccordion :items="faqItems" :ui="{
                         item: 'border-b border-default last:border-b-0',

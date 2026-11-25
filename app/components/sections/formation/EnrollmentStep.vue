@@ -118,11 +118,11 @@ onUnmounted(() => {
     ctx?.revert()
 })
 </script>
+
 <template>
     <section ref="section-ref" class="bg-default py-16 sm:py-24">
         <UContainer>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                <!-- COLONNE GAUCHE : TITRE + PAIEMENT -->
                 <div class="lg:col-span-5 text-left">
                     <p data-steps-eyebrow class="text-xs font-bold tracking-[0.15em] mb-3 uppercase text-primary">
                         Processus d’inscription
@@ -138,7 +138,7 @@ onUnmounted(() => {
                         par le formateur. Le solde restant se paie le premier jour de la formation.
                     </p>
 
-                    <div data-steps-left-box class="mt-8 rounded-xl bg-neutral-100 p-6">
+                    <div data-steps-left-box class="mt-8 rounded-xl bg-elevated border border-default/60 p-6">
                         <div class="flex items-center gap-2.5 text-sm font-bold text-highlighted">
                             <UIcon name="i-lucide-wallet" class="size-5 text-primary shrink-0" />
                             <span>Moyens de paiement acceptés</span>
@@ -146,7 +146,7 @@ onUnmounted(() => {
 
                         <div class="mt-4 flex flex-wrap gap-2">
                             <span v-for="method in paymentMethods" :key="method"
-                                class="rounded-full bg-default px-3.5 py-1.5 text-xs font-semibold text-highlighted">
+                                class="rounded-full bg-default border border-default px-3.5 py-1.5 text-xs font-semibold text-highlighted">
                                 {{ method }}
                             </span>
                         </div>
@@ -158,27 +158,23 @@ onUnmounted(() => {
                     </div>
                 </div>
 
-                <!-- COLONNE DROITE : TIMELINE VERTICALE CONNECTÉE -->
                 <div data-steps-timeline class="lg:col-span-7 relative">
-                    <!-- Fil conducteur vertical gris + barre rouge animée au scroll -->
                     <div aria-hidden="true"
-                        class="absolute left-5 top-6 bottom-6 w-[2px] bg-neutral-200 overflow-hidden">
+                        class="absolute left-5 top-6 bottom-6 w-[2px] bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
                         <div data-steps-vertical-line class="size-full bg-primary" />
                     </div>
 
                     <div class="space-y-8">
                         <div v-for="step in steps" :key="step.number" data-step-node
                             class="relative flex items-start gap-6">
-                            <!-- Pastille numérotée rouge -->
                             <div
-                                class="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-extrabold tracking-wider text-white ring-4 ring-white">
+                                class="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-extrabold tracking-wider text-white ring-4 ring-white dark:ring-[#0a0a0a]">
                                 {{ step.number }}
                             </div>
 
-                            <!-- Carte flat de l'étape (Chip neutre -> Titre -> Description) -->
-                            <div class="flex-1 rounded-xl bg-neutral-100 p-6 sm:p-7 text-left">
+                            <div class="flex-1 rounded-xl bg-elevated border border-default/60 p-6 sm:p-7 text-left">
                                 <span
-                                    class="inline-flex items-center rounded-full bg-default px-3 py-1 text-xs font-semibold text-muted">
+                                    class="inline-flex items-center rounded-full bg-default border border-default px-3 py-1 text-xs font-semibold text-muted">
                                     {{ step.badge }}
                                 </span>
 

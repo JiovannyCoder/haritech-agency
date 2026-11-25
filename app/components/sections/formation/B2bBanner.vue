@@ -64,11 +64,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section ref="section-ref" class="bg-neutral-100 py-12 sm:py-16">
+    <section ref="section-ref" class="bg-elevated/50 py-12 sm:py-16">
         <UContainer>
             <div ref="card-frame-ref"
-                class="rounded-2xl p-2 sm:p-2.5 bg-gradient-to-b from-white/80 to-white/40 backdrop-blur-xl border border-white ring-1 ring-neutral-950/[0.07]">
-                <div class="rounded-xl bg-default text-default ring-1 ring-neutral-950/[0.06] overflow-hidden">
+                class="rounded-2xl p-2 sm:p-2.5 bg-gradient-to-b from-white/80 to-white/40 dark:from-white/[0.05] dark:to-white/[0.02] backdrop-blur-xl border border-white dark:border-white/15 ring-1 ring-neutral-950/[0.07] dark:ring-black/40">
+                <div
+                    class="rounded-xl bg-default text-default ring-1 ring-black/[0.07] dark:ring-white/10 overflow-hidden">
                     <div class="flex flex-col lg:flex-row items-stretch">
                         <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left">
                             <span ref="headline-text-ref"
@@ -89,7 +90,7 @@ onUnmounted(() => {
 
                             <div class="mt-4 flex flex-wrap items-center gap-2">
                                 <span v-for="tag in enterpriseTags" :key="tag"
-                                    class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-muted">
+                                    class="rounded-full bg-elevated px-3 py-1 text-xs font-medium text-muted">
                                     {{ tag }}
                                 </span>
                             </div>
@@ -103,7 +104,7 @@ onUnmounted(() => {
                         </div>
 
                         <div
-                            class="group lg:w-80 xl:w-96 shrink-0 h-48 m-6 sm:m-8 lg:my-6 lg:mr-6 lg:ml-0 rounded-lg overflow-hidden sm:h-56 lg:h-auto bg-neutral-100">
+                            class="group lg:w-80 xl:w-96 shrink-0 h-48 m-6 sm:m-8 lg:my-6 lg:mr-6 lg:ml-0 rounded-lg overflow-hidden sm:h-56 lg:h-auto bg-elevated">
                             <img src="/images/formation/b2b-banner.jpg"
                                 alt="Deux professionnels se serrant la main devant un ordinateur portable"
                                 loading="lazy"

@@ -141,9 +141,9 @@ onUnmounted(() => {
             </div>
 
             <div data-sessions-table
-                class="rounded-xl p-1.5 bg-neutral-100/45 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/10 ring-1 ring-black/[0.06] dark:ring-black/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] dark:shadow-none">
+                class="rounded-2xl p-2 sm:p-2.5 bg-neutral-100/45 dark:bg-white/[0.03] backdrop-blur-md border border-white/90 dark:border-white/10 ring-1 ring-black/[0.06] dark:ring-black/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] dark:shadow-none">
                 <div
-                    class="rounded-lg bg-default ring-1 ring-black/[0.06] dark:ring-white/10 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden">
+                    class="rounded-xl bg-default ring-1 ring-black/[0.06] dark:ring-white/10 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.06)] dark:shadow-none overflow-hidden">
                     <div
                         class="hidden lg:grid lg:grid-cols-12 gap-4 px-6 py-3.5 bg-neutral-50/90 dark:bg-neutral-900/80 border-b border-default text-[11px] font-bold tracking-[0.1em] uppercase text-muted">
                         <div class="col-span-5">
