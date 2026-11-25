@@ -98,10 +98,12 @@ onUnmounted(() => {
         <UContainer>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 <div class="lg:col-span-4 text-left">
-                    <div class="flex items-center gap-2.5 mb-3">
-                        <p data-faq-eyebrow class="text-xs font-bold tracking-[0.15em] uppercase text-primary">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+                        <span ref="headline-text-ref"
+                            class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
                             Questions fréquentes
-                        </p>
+                        </span>
                     </div>
 
                     <h2 data-faq-title

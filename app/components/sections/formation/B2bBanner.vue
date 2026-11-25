@@ -72,10 +72,13 @@ onUnmounted(() => {
                     class="rounded-xl bg-default text-default ring-1 ring-black/[0.07] dark:ring-white/10 overflow-hidden">
                     <div class="flex flex-col lg:flex-row items-stretch">
                         <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center text-left">
-                            <span ref="headline-text-ref"
-                                class="mb-2.5 inline-block text-xs font-bold tracking-[0.15em] uppercase text-primary">
-                                Solutions entreprises
-                            </span>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+                                <span ref="headline-text-ref"
+                                    class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
+                                    Solutions entreprises
+                                </span>
+                            </div>
 
                             <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-highlighted leading-snug">
                                 Formez vos équipes internes

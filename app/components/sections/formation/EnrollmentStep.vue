@@ -124,9 +124,13 @@ onUnmounted(() => {
         <UContainer>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <div class="lg:col-span-5 text-left">
-                    <p data-steps-eyebrow class="text-xs font-bold tracking-[0.15em] mb-3 uppercase text-primary">
-                        Processus d’inscription
-                    </p>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+                        <span ref="headline-text-ref"
+                            class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
+                            Processus d’inscription
+                        </span>
+                    </div>
 
                     <h2 data-steps-title
                         class="text-3xl sm:text-4xl font-extrabold tracking-tight text-highlighted leading-[1.12]">

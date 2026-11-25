@@ -132,17 +132,16 @@ onUnmounted(() => {
                 </p>
             </div>
 
-            <!-- Fond légèrement élevé en dark mode pour détacher le bloc du fond noir -->
             <div ref="cards-grid-ref"
                 class="grid grid-cols-1 lg:grid-cols-3 rounded-2xl border border-default dark:border-white/10 bg-default dark:bg-elevated/50 overflow-hidden divide-y lg:divide-y-0 lg:divide-x divide-default dark:divide-white/10"
                 @mouseleave="activeIndex = 1">
                 <div v-for="(pillar, index) in pillars" :key="pillar.number"
                     class="relative overflow-hidden p-8 sm:p-10 flex flex-col justify-between min-h-[280px] cursor-default"
                     @mouseenter="activeIndex = index">
-                    <!-- Cercle agrandi (950px) pour remplir 100% de la carte, y compris le coin haut-droit -->
                     <span
-                        class="pointer-events-none absolute -bottom-32 -left-32 size-[950px] rounded-full bg-primary origin-bottom-left transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                        :class="activeIndex === index ? 'scale-100' : 'scale-0'" aria-hidden="true" />
+                        class="pointer-events-none absolute inset-0 bg-primary transition-[clip-path] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        :class="activeIndex === index ? '[clip-path:circle(150%_at_0%_100%)]' : '[clip-path:circle(0%_at_0%_100%)]'"
+                        aria-hidden="true" />
 
                     <div class="relative z-10 flex items-center justify-between gap-4 mb-12">
                         <div class="size-10 rounded-lg flex items-center justify-center transition-colors duration-500 ease-out shrink-0"

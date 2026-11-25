@@ -94,9 +94,13 @@ onUnmounted(() => {
         <UContainer>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
                 <div class="lg:col-span-4 text-left">
-                    <p data-cat-eyebrow class="mb-3 text-xs font-bold tracking-[0.15em] uppercase text-primary">
-                        Nos 4 pôles métiers
-                    </p>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+                        <span ref="headline-text-ref"
+                            class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
+                             Nos 4 pôles métiers
+                        </span>
+                    </div>
 
                     <h2 data-cat-title
                         class="text-3xl sm:text-4xl font-extrabold tracking-tight text-highlighted leading-[1.12]">

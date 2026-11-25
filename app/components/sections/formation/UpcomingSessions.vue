@@ -114,9 +114,13 @@ onUnmounted(() => {
     <section ref="section-ref" class="bg-default py-16 sm:py-24">
         <UContainer>
             <div class="max-w-2xl text-left">
-                <p class="mb-3 text-xs font-bold tracking-[0.15em] uppercase text-primary">
-                    Calendrier Antananarivo
-                </p>
+                <div class="flex items-center gap-3 mb-4">
+                    <span ref="headline-line-ref" class="w-5 h-[1.5px] bg-primary inline-block shrink-0" />
+                    <span ref="headline-text-ref"
+                        class="text-xs font-bold tracking-[0.15em] uppercase text-primary dark:text-brand-400">
+                        Calendrier Antananarivo
+                    </span>
+                </div>
 
                 <h2 data-sessions-title
                     class="text-3xl sm:text-4xl font-extrabold tracking-tight text-highlighted leading-[1.12]">

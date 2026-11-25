@@ -10,7 +10,7 @@ const proofs = [
     },
     {
         icon: 'i-lucide-users',
-        label: '15 places max (Salle en U)'
+        label: '15 places max'
     },
     {
         icon: 'i-lucide-terminal',
@@ -108,11 +108,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section ref="section-ref" class="relative overflow-hidden bg-default pt-16 pb-14 sm:pt-24 sm:pb-20">
+    <section ref="section-ref" class="relative overflow-hidden bg-default pt-16 sm:pt-24">
         <div aria-hidden="true" data-hero-dots
             class="pointer-events-none absolute inset-0 opacity-55 bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-700)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:linear-gradient(to_bottom,black_30%,transparent_90%)]" />
 
-        <UContainer class="relative z-10">
+        <UContainer class="relative z-10 pb-14 sm:pb-20">
             <div class="max-w-3xl text-left">
                 <p data-hero-eyebrow class="mb-5 text-xs font-bold tracking-[0.15em] uppercase text-primary">
                     Formations pratiques à Antananarivo
@@ -120,28 +120,40 @@ onUnmounted(() => {
 
                 <h1 data-hero-title
                     class="text-4xl sm:text-5xl font-extrabold tracking-tight text-highlighted leading-[1.1]">
-                    Apprenez un métier numérique par la pratique, pas par la théorie.
+                    Apprenez un métier numérique <span class="text-primary">par la pratique</span>, pas par la théorie.
                 </h1>
 
                 <p data-hero-desc class="mt-5 text-base sm:text-lg text-muted leading-relaxed max-w-2xl">
                     Des bootcamps intensifs de 8h à 12h en présentiel (15 places maximum) encadrés par des praticiens en
                     activité. Repartez avec un livrable concret et une attestation officielle.
                 </p>
-
-                <div class="mt-8 flex flex-wrap items-center gap-2.5 sm:gap-3">
-                    <div v-for="proof in proofs" :key="proof.label" data-hero-badge
-                        class="inline-flex items-center gap-2 rounded-sm border border-default bg-default px-3 py-1.5 text-xs sm:text-sm font-medium text-highlighted">
-                        <UIcon :name="proof.icon" class="size-4 text-primary shrink-0" />
-                        <span>{{ proof.label }}</span>
-                    </div>
-                </div>
             </div>
 
             <div data-hero-media
-                class="pointer-events-none hidden lg:flex lg:justify-end lg:items-end lg:absolute lg:-bottom-20 lg:right-8 xl:right-12 lg:w-1/3">
+                class="pointer-events-none hidden lg:flex lg:justify-end lg:items-end lg:absolute lg:bottom-0 lg:right-8 xl:right-12 lg:w-1/3">
                 <img src="/images/formation/hero.png" alt="Participant regardant vers l'avenir chez Haritech Agency"
                     class="block max-h-[340px] xl:max-h-[380px] w-auto object-contain object-bottom dark:brightness-90 dark:contrast-105 transition-[filter] duration-300" />
             </div>
         </UContainer>
+
+        <div class="relative z-10 border-y border-default bg-elevated/40">
+            <UContainer>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-(--ui-border)">
+                    <div v-for="(proof, index) in proofs" :key="proof.label" data-hero-badge
+                        class="py-4 sm:py-5 px-4 first:pl-0 last:pr-0 flex items-center gap-3 text-xs sm:text-sm font-semibold text-highlighted"
+                        :class="[
+                            index % 2 === 1 ? 'sm:border-l lg:border-l-0 sm:border-(--ui-border)' : '',
+                            index >= 2 ? 'sm:border-t lg:border-t-0 sm:border-(--ui-border)' : ''
+                        ]">
+                        <div
+                            class="size-8 rounded-sm bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <UIcon :name="proof.icon" class="size-4" />
+                        </div>
+                        <span>{{ proof.label }}</span>
+                    </div>
+                </div>
+            </UContainer>
+        </div>
     </section>
 </template>
